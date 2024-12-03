@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../app/components/Header";
-import Gazo from "../components/gazo";
+import Gazo from "../app/components/gazo";
 
 
 function Home() {
