@@ -23,8 +23,8 @@ function Home() {
             {/* 横棒 */}
             <div
               style={{
-                width: "5px", // 棒の太さ
-                height: "612px", // 画像と同じ高さに設定
+                width: "100px", // 棒の太さ
+                height: "5px", // 画像と同じ高さに設定
                 backgroundColor: "black", // 棒の色
               }}
             ></div>
@@ -33,8 +33,8 @@ function Home() {
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
               alt="サンプル画像"
               caption="コントラスト調整された画像"
-              offsetX={0} // 横方向のオフセット（なし）
-              offsetY={0} // 縦方向のオフセット（なし）
+              offsetX={450} // 横方向のオフセット（なし）
+              offsetY={-100} // 縦方向のオフセット（なし）
               contrast={75} // コントラストを75%に設定
             />
           </div>
