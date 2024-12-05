@@ -7,32 +7,34 @@ interface GazoProps {
   caption?: string; // 画像のキャプション (オプション)
   width?: number; // 画像の幅
   height?: number; // 画像の高さ
+  offsetX?: number; // 横方向のオフセット
+  offsetY?: number; // 縦方向のオフセット
 }
 
-const Gazo: React.FC<GazoProps> = ({ src, alt, caption, width = 459, height = 816 }) => {
+const Gazo: React.FC<GazoProps> = ({ src, alt, caption, width = 459, height = 816, offsetX = 0, offsetY = 0 }) => {
   return (
-    <div style={{ textAlign: "right" }}> {/* 親要素で右寄せ */}
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
+    <div style={{ textAlign: "center", position: "relative" }}>
+      <div
         style={{
-          borderRadius: "8px",
-          display: "inline-block", // 必要に応じてブロック要素化
+          position: "relative",
+          left: `${offsetX}px`, // 横方向の調整
+          top: `${offsetY}px`,  // 縦方向の調整
         }}
-      />
-      {caption && (
-        <p
+      >
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
           style={{
-            marginTop: "8px",
-            fontSize: "14px",
-            color: "#555",
-            textAlign: "right", // キャプションも右寄せ
+            borderRadius: "8px",
+            display: "block",
+            margin: "0 auto",
           }}
-        >
-          {caption}
-        </p>
+        />
+      </div>
+      {caption && (
+        <p style={{ marginTop: "8px", fontSize: "14px", color: "#555" }}>{caption}</p>
       )}
     </div>
   );
