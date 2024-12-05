@@ -13,14 +13,31 @@ function Home() {
         {/* Gazoコンポーネントをここで使用 */}
         <section style={{ marginTop: "20px" }}>
           <h2>写真ギャラリー</h2>
-          <Gazo
-            src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
-            alt="サンプル画像"
-            caption="コントラスト調整された画像"
-            offsetX={400} // 横方向のオフセット
-            offsetY={-170} // 縦方向のオフセット
-            contrast={75} // コントラストを150%に設定
-          />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "20px", // 横棒と画像の間隔
+            }}
+          >
+            {/* 横棒 */}
+            <div
+              style={{
+                width: "5px", // 棒の太さ
+                height: "612px", // 画像と同じ高さに設定
+                backgroundColor: "black", // 棒の色
+              }}
+            ></div>
+            {/* 画像 */}
+            <Gazo
+              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
+              alt="サンプル画像"
+              caption="コントラスト調整された画像"
+              offsetX={0} // 横方向のオフセット（なし）
+              offsetY={0} // 縦方向のオフセット（なし）
+              contrast={75} // コントラストを75%に設定
+            />
+          </div>
         </section>
       </main>
     </div>
