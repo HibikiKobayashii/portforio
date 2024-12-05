@@ -17,7 +17,7 @@ function Home() {
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt="サンプル画像"
             caption="コントラスト調整された画像"
-            offsetX={70} // 横方向のオフセット
+            offsetX={500} // 横方向のオフセット
             offsetY={20} // 縦方向のオフセット
             contrast={75} // コントラストを150%に設定
           />
