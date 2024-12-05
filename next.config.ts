@@ -12,7 +12,7 @@ module.exports = {
       {
         protocol: "https",
         hostname: "hibikikobayashii.github.io",
-        pathname: "/app/components/gazo/**",
+        pathname: "/app/components/gazo/hibiki.jpg",
       },
     ],
   },
