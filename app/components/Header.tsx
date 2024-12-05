@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <header style={headerStyle}>
       <div style={containerStyle}>
-        <h1 style={logoStyle}>個人用ポートフォリオ</h1>
+        <h1 style={logoStyle}>API実習ポートフォリオ</h1>
         <nav>
           <ul style={navListStyle}>
             <li style={navItemStyle}>
