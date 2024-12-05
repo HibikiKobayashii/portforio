@@ -18,7 +18,7 @@ function Home() {
             alt="サンプル画像"
             caption="コントラスト調整された画像"
             offsetX={400} // 横方向のオフセット
-            offsetY={-300} // 縦方向のオフセット
+            offsetY={-100} // 縦方向のオフセット
             contrast={75} // コントラストを150%に設定
           />
         </section>
