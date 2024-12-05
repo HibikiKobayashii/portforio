@@ -9,6 +9,7 @@ interface GazoProps {
   height?: number; // 画像の高さ
   offsetX?: number; // 横方向のオフセット
   offsetY?: number; // 縦方向のオフセット
+  contrast?: number;
 }
 
 const Gazo: React.FC<GazoProps> = ({ src, alt, caption, width = 459, height = 816, offsetX = 0, offsetY = 0 }) => {
