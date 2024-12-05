@@ -23,7 +23,7 @@ function Home() {
             {/* 横棒 */}
             <div
               style={{
-                width: "700px", // 棒の太さ
+                width: "2000px", // 棒の太さ
                 height: "5px", // 画像と同じ高さに設定
                 backgroundColor: "black", // 棒の色
               }}
@@ -31,10 +31,10 @@ function Home() {
             {/* 画像 */}
             <Gazo
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
-              alt="サンプル画像"
-              caption="コントラスト調整された画像"
+              alt="小林響"
+              caption="小林響"
               offsetX={150} // 横方向のオフセット（なし）
-              offsetY={-100} // 縦方向のオフセット（なし）
+              offsetY={-400} // 縦方向のオフセット（なし）
               contrast={50} // コントラストを75%に設定
             />
           </div>
