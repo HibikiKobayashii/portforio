@@ -11,15 +11,29 @@ interface GazoProps {
 
 const Gazo: React.FC<GazoProps> = ({ src, alt, caption, width = 459, height = 816 }) => {
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "right" }}> {/* 親要素で右寄せ */}
       <Image
         src={src}
         alt={alt}
         width={width}
         height={height}
-        style={{ borderRadius: "8px", display: "block", margin: "0 auto" }}
+        style={{
+          borderRadius: "8px",
+          display: "inline-block", // 必要に応じてブロック要素化
+        }}
       />
-      {caption && <p style={{ marginTop: "8px", fontSize: "14px", color: "#555" }}>{caption}</p>}
+      {caption && (
+        <p
+          style={{
+            marginTop: "8px",
+            fontSize: "14px",
+            color: "#555",
+            textAlign: "right", // キャプションも右寄せ
+          }}
+        >
+          {caption}
+        </p>
+      )}
     </div>
   );
 };
