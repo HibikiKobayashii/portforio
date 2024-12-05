@@ -15,10 +15,11 @@ function Home() {
           <h2>写真ギャラリー</h2>
           <Gazo
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
-            alt=""
-            caption=""
-            offsetX={50} // 横
-  　　　　　　offsetY={20} // 縦
+            alt="サンプル画像"
+            caption="コントラスト調整された画像"
+            offsetX={50} // 横方向のオフセット
+            offsetY={20} // 縦方向のオフセット
+            contrast={150} // コントラストを150%に設定
           />
         </section>
       </main>
