@@ -9,10 +9,19 @@ interface GazoProps {
   height?: number; // 画像の高さ
   offsetX?: number; // 横方向のオフセット
   offsetY?: number; // 縦方向のオフセット
-  contrast?: number;
+  contrast?: number; // コントラストの調整（デフォルトは100）
 }
 
-const Gazo: React.FC<GazoProps> = ({ src, alt, caption, width = 459, height = 816, offsetX = 0, offsetY = 0 }) => {
+const Gazo: React.FC<GazoProps> = ({
+  src,
+  alt,
+  caption,
+  width = 459,
+  height = 816,
+  offsetX = 0,
+  offsetY = 0,
+  contrast = 100, // デフォルトは100%
+}) => {
   return (
     <div style={{ textAlign: "center", position: "relative" }}>
       <div
@@ -31,6 +40,7 @@ const Gazo: React.FC<GazoProps> = ({ src, alt, caption, width = 459, height = 81
             borderRadius: "8px",
             display: "block",
             margin: "0 auto",
+            filter: `contrast(${contrast}%)`, // コントラストを変更
           }}
         />
       </div>
