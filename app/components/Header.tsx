@@ -31,14 +31,16 @@ const Header: React.FC = () => {
   );
 };
 
-// 修正点: headerStyle に CSSProperties 型を指定
+// 修正点: headerStyle に幅を指定
 const headerStyle: React.CSSProperties = {
   backgroundColor: "#282c34",
   color: "white",
   padding: "10px 20px",
-  position: "sticky", // これで適切に "sticky" が認識される
+  position: "sticky",
   top: 0,
   zIndex: 1000,
+  width: "100%", // 追加: ヘッダーをページ全体に広げる
+  margin: 0, // 追加: 余白をゼロにする
 };
 
 const containerStyle = {
