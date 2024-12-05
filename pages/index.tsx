@@ -14,7 +14,7 @@ function Home() {
         <section style={{ marginTop: "20px" }}>
           <h2>写真ギャラリー</h2>
           <Gazo
-            src="https://drive.google.com/drive/folders/1gNnYHNP88I9lwGkU61iZiYOKS1B8nDUD?usp=sharing"
+            src=""https://drive.google.com/uc?export=view&id=1gNnYHNP88I9lwGkU61iZiYOKS1B8nDUD
             alt=""
             caption=""
           />
