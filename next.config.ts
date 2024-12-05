@@ -6,4 +6,16 @@ const nextConfig: NextConfig = {
   // 他の設定も必要に応じて追加できます
 };
 
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "hibikikobayashii.github.io",
+        pathname: "/app/components/gazo/**",
+      },
+    ],
+  },
+};
+
 export default nextConfig;
