@@ -16,8 +16,8 @@ const Gazo: React.FC<GazoProps> = ({
   src,
   alt,
   caption,
-  width = 114,
-  height = 204,
+  width = 342,
+  height = 612,
   offsetX = 0,
   offsetY = 0,
   contrast = 100, // デフォルトは100%
