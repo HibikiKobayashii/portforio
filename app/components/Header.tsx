@@ -16,7 +16,7 @@ const Header: React.FC = () => {
             </li>
             <li style={navItemStyle}>
               <a href="#" style={linkStyle}>
-                About
+                About me
               </a>
             </li>
             <li style={navItemStyle}>
