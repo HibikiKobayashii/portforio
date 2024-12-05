@@ -9,7 +9,7 @@ interface GazoProps {
   height?: number; // 画像の高さ
 }
 
-const Gazo: React.FC<GazoProps> = ({ src, alt, caption, width = 400, height = 300 }) => {
+const Gazo: React.FC<GazoProps> = ({ src, alt, caption, width = 400, height = 900 }) => {
   return (
     <div style={{ textAlign: "center" }}>
       <Image
