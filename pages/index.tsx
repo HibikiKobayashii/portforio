@@ -4,7 +4,7 @@ import Gazo from "../app/components/gazo";
 
 function Home() {
   return (
-    <div style={{ backgroundColor: "#white", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#aliceblue", minHeight: "100vh" }}>
       <Header />
       <main style={{ padding: "20px" }}>
         <h1>API実習ポートフォリオ</h1>
