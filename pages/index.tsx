@@ -7,7 +7,7 @@ function Home() {
     <div style={{ backgroundColor: "#aliceblue", minHeight: "100vh" }}>
       <Header />
       <main style={{ padding: "20px" }}>
-        <h1>API実習ポートフォリオ</h1>
+        <h1></h1>
         <p>This is a basic Next.js site with a TypeScript header.</p>
 
         {/* Gazoコンポーネントをここで使用 */}
