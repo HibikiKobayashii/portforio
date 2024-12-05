@@ -11,13 +11,13 @@ interface GazoProps {
 
 const Gazo: React.FC<GazoProps> = ({ src, alt, caption, width = 400, height = 300 }) => {
   return (
-    <div style={{ border: "1px solid #ccc", padding: "10px", textAlign: "center" }}>
+    <div style={{ textAlign: "center" }}>
       <Image
         src={src}
         alt={alt}
         width={width}
         height={height}
-        style={{ borderRadius: "8px" }}
+        style={{ borderRadius: "8px", display: "block", margin: "0 auto" }}
       />
       {caption && <p style={{ marginTop: "8px", fontSize: "14px", color: "#555" }}>{caption}</p>}
     </div>
