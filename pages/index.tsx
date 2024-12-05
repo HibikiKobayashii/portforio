@@ -17,6 +17,8 @@ function Home() {
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt=""
             caption=""
+            offsetX={50} // 横
+  　　　　　　offsetY={20} // 縦
           />
         </section>
       </main>
