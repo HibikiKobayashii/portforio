@@ -15,8 +15,8 @@ function Home() {
           <h2>写真ギャラリー</h2>
           <Gazo
             src="app/components/gazo/hibiki.jpg"
-            alt="サンプル画像"
-            caption="これはサンプル画像です"
+            alt=""
+            caption=""
           />
         </section>
       </main>
