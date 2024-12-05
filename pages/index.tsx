@@ -33,8 +33,8 @@ function Home() {
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
               alt="小林響"
               caption="小林響"
-              offsetX={150} // 横方向のオフセット（なし）
-              offsetY={-400} // 縦方向のオフセット（なし）
+              offsetX={-300} // 横方向のオフセット（なし）
+              offsetY={-100 // 縦方向のオフセット（なし）
               contrast={50} // コントラストを75%に設定
             />
           </div>
