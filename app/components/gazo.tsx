@@ -41,6 +41,7 @@ const Gazo: React.FC<GazoProps> = ({
             display: "block",
             margin: "0 auto",
             filter: `contrast(${contrast}%)`, // コントラストを変更
+            border: "5px solid black", // 黒い縁取りを追加
           }}
         />
       </div>
