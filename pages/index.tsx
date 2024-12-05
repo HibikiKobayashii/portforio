@@ -14,7 +14,7 @@ function Home() {
         <section style={{ marginTop: "20px" }}>
           <h2>写真ギャラリー</h2>
           <Gazo
-            src="app/components/gazo/hibiki.jpg"
+            src="https://hibikikobayashii.github.io/app/components/gazo/hibiki.jpg"
             alt=""
             caption=""
           />
