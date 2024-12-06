@@ -34,8 +34,8 @@ function Home() {
               alt="小林響"
               caption="小林響"
               offsetX={-300} // 横方向のオフセット（なし）
-              offsetY={-100 // 縦方向のオフセット（なし）
-              contrast={50} // コントラストを75%に設定
+              offsetY={-100}// 縦方向のオフセット（なし）
+              contrast={50} // コントラスト
             />
           </div>
         </section>
