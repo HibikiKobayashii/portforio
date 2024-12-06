@@ -6,7 +6,8 @@ const Header: React.FC = () => {
   return (
     <header style={headerStyle}>
       <div style={containerStyle}>
-        <h1 style={logoStyle}>API実習ポートフォリオ</h1>
+        {/* logoStyle に位置調整用のプロパティを追加 */}
+        <h1 style={logoStyle}>ポートフォリオ</h1>
         <nav>
           <ul style={navListStyle}>
             <li style={navItemStyle}>
@@ -36,7 +37,6 @@ const Header: React.FC = () => {
   );
 };
 
-// 修正点: headerStyle に幅を指定
 const headerStyle: React.CSSProperties = {
   backgroundColor: "#282c34",
   color: "white",
@@ -44,11 +44,11 @@ const headerStyle: React.CSSProperties = {
   position: "sticky",
   top: 0,
   zIndex: 1000,
-  width: "100%", // 追加: ヘッダーをページ全体に広げる
-  margin: 0, // 追加: 余白をゼロにする
+  width: "100%", // ヘッダーをページ全体に広げる
+  margin: 0, // 余白をゼロにする
 };
 
-const containerStyle = {
+const containerStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -56,12 +56,15 @@ const containerStyle = {
   margin: "0 auto",
 };
 
-const logoStyle = {
+const logoStyle: React.CSSProperties = {
   fontSize: "1.5rem",
   margin: 0,
+  position: "relative", // 相対位置を設定
+  top: "0px", // 下に10px移動
+  left: "-100px", // 右に20px移動
 };
 
-const navListStyle = {
+const navListStyle: React.CSSProperties = {
   listStyle: "none",
   display: "flex",
   gap: "15px",
@@ -69,15 +72,18 @@ const navListStyle = {
   padding: 0,
 };
 
-const navItemStyle = {
+const navItemStyle: React.CSSProperties = {
   display: "inline",
 };
 
-const linkStyle = {
+const linkStyle: React.CSSProperties = {
   color: "white",
   textDecoration: "none",
   fontSize: "1rem",
   transition: "color 0.3s ease",
+  position: "relative", // 相対位置を設定
+  top: "0px", // 下に5px移動
+  left: "80px", // 右に10px移動
 };
 
 export default Header;
