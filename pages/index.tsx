@@ -65,7 +65,7 @@ function Home() {
               height={5} // 棒の高さ
               color="black" // 棒の色
               offsetX={100} // 横方向のオフセット
-              offsetY={-30} // 縦方向のオフセット
+              offsetY={0} // 縦方向のオフセット
             />
             <h2
               style={{
