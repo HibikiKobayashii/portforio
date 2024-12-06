@@ -23,7 +23,7 @@ function Home() {
             {/* 横棒 */}
             <div
               style={{
-                width: "1300px", // 棒の太さ
+                width: "800px", // 棒の太さ
                 height: "5px", // 画像と同じ高さに設定
                 backgroundColor: "black", // 棒の色
               }}
