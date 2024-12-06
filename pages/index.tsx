@@ -103,7 +103,7 @@ function Home() {
             left: "0",
             width: "100%",
             height: "100%",
-            backgroundImage: "url('https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/1.jpg')", // 背景画像のURL
+            backgroundImage: "url('https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/2.jpg')", // 背景画像のURL
             backgroundSize: "cover",
             backgroundPosition: "center",
             zIndex: -1, // 他のコンテンツの後ろに配置
