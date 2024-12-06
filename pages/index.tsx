@@ -53,7 +53,7 @@ function Home() {
             />
             {/* 画像 */}
             <Gazo
-              src=""//"https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
+              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
               alt="小林響"
               caption="小林響"
               offsetX={500} // 横方向のオフセット（なし）
