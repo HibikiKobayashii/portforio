@@ -17,7 +17,7 @@ const Header: React.FC = () => {
             </li>
             <li style={navItemStyle}>
               <a href="#" style={linkStyle}>
-                About me
+                Biography
               </a>
             </li>
             <li style={navItemStyle}>
