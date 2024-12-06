@@ -22,7 +22,7 @@ const Header: React.FC = () => {
             </li>
             <li style={navItemStyle}>
               <a href="#" style={linkStyle}>
-                contact
+                Contact
               </a>
             </li>
            
