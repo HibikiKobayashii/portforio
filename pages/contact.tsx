@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 
 const Contact = () => {
   return (
@@ -10,4 +9,4 @@ const Contact = () => {
   );
 };
 
-export default contact;  // React コンポーネントをデフォルトエクスポート
+export default Contact;  // Contact コンポーネントをエクスポート
