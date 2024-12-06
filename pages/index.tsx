@@ -92,7 +92,7 @@ function Home() {
           </div>
           {/* 画像 */}
           <Gazo
-            src="" // "https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
+            src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt="小林響"
        
             offsetX={270}
