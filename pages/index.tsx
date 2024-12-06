@@ -8,11 +8,11 @@ function Home() {
       <Header />
       <main style={{ padding: "20px" }}>
         <h1></h1>
-        <p>This is a basic Next.js site with a TypeScript header.</p>
+        <p></p>
 
         {/* Gazoコンポーネントをここで使用 */}
         <section style={{ marginTop: "20px" }}>
-          <h2>写真ギャラリー</h2>
+          <h2></h2>
           <div
             style={{
               display: "flex",
