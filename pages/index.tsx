@@ -26,11 +26,7 @@ const HorizontalBar: React.FC<BarProps> = ({ width, height, color, offsetX, offs
 };
 
 function Home() {
-  const [textOffsetX, setTextOffsetX] = useState(0); // h1の横方向のオフセット
-  const [textOffsetY, setTextOffsetY] = useState(0); // h1の縦方向のオフセット
-  const [barOffsetX, setBarOffsetX] = useState(0); // 横棒の横方向のオフセット
-  const [barOffsetY, setBarOffsetY] = useState(0); // 横棒の縦方向のオフセット
-  const [fontSize, setFontSize] = useState(24); // フォントサイズ
+  
 
   return (
     <div style={{ backgroundColor: "#aliceblue", minHeight: "100vh" }}>
