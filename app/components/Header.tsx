@@ -21,6 +21,11 @@ const Header: React.FC = () => {
             </li>
             <li style={navItemStyle}>
               <a href="#" style={linkStyle}>
+                contact
+              </a>
+            </li>
+            <li style={navItemStyle}>
+              <a href="#" style={linkStyle}>
                 お問い合わせ
               </a>
             </li>
