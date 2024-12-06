@@ -10,4 +10,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;  // React コンポーネントをデフォルトエクスポート
+export default contact;  // React コンポーネントをデフォルトエクスポート
