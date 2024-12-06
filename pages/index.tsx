@@ -98,7 +98,7 @@ function Home() {
           <Gazo
             src="" // "https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt="小林響"
-            caption="小林響"
+       
             offsetX={270}
             offsetY={20}
             contrast={50}
