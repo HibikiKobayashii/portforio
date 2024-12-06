@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React from "react";
 
 const Biography = () => {
   return (
@@ -10,4 +9,4 @@ const Biography = () => {
   );
 };
 
-export default Biography;  // React コンポーネントをデフォルトエクスポート
+export default Biography;  // Biography コンポーネントをエクスポート
