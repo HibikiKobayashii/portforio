@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../app/components/Header";
 import Gazo from "../app/components/gazo";
 
@@ -26,42 +26,90 @@ const HorizontalBar: React.FC<BarProps> = ({ width, height, color, offsetX, offs
 };
 
 function Home() {
+  const [textOffsetX, setTextOffsetX] = useState(0); // h1の横方向のオフセット
+  const [textOffsetY, setTextOffsetY] = useState(0); // h1の縦方向のオフセット
+  const [barOffsetX, setBarOffsetX] = useState(0); // 横棒の横方向のオフセット
+  const [barOffsetY, setBarOffsetY] = useState(0); // 横棒の縦方向のオフセット
+  const [fontSize, setFontSize] = useState(24); // フォントサイズ
+
   return (
     <div style={{ backgroundColor: "#aliceblue", minHeight: "100vh" }}>
       <Header />
       <main style={{ padding: "20px" }}>
-        <h1></h1>
-        <p></p>
-
-        {/* Gazoコンポーネントをここで使用 */}
-        <section style={{ marginTop: "20px" }}>
-          <h2></h2>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "20px", // 横棒と画像の間隔
+          }}
+        >
           <div
             style={{
               display: "flex",
+              flexDirection: "column",
               alignItems: "center",
-              gap: "20px", // 横棒と画像の間隔
+              gap: "10px", // Text and bar spacing
             }}
           >
-            {/* 横棒 */}
+            {/* Text with adjustable font size */}
+            <h1
+              style={{
+                margin: 0,
+                fontSize: `${50}px`, // フォントサイズを動的に変更
+                textAlign: "center",
+                position: "relative",
+                left: `${100}px`, // 横方向のオフセット
+                top: `${-60}px`, // 縦方向のオフセット
+              }}
+            >
+              I am an IoT Student !!
+            </h1>
+           
+            {/* Horizontal Bar */}
             <HorizontalBar
-              width={500} // 棒の幅
+              width={700} // 棒の幅
               height={5} // 棒の高さ
               color="black" // 棒の色
-              offsetX={50} // 横方向のオフセット
-              offsetY={-200} // 縦方向のオフセット
+              offsetX={100} // 横方向のオフセット
+              offsetY={-70} // 縦方向のオフセット
             />
-            {/* 画像 */}
-            <Gazo
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
-              alt="小林響"
-              caption="小林響"
-              offsetX={500} // 横方向のオフセット（なし）
-              offsetY={0} // 縦方向のオフセット（なし）
-              contrast={50} // コントラスト
-            />
+             <h2
+              style={{
+                margin: 0,
+                fontSize: `${30}px`, // フォントサイズを動的に変更
+                textAlign: "center",
+                position: "relative",
+                left: `${100}px`, // 横方向のオフセット
+                top: `${-30}px`, // 縦方向のオフセット
+              }}
+            >
+               <br></br>
+             開志専門職大学でIoTを学んでいる小林響と申します！
+            <br></br>
+            <br></br>
+         
+             XR系に力を入れています！
+         
+             
+
+            </h2>
           </div>
-        </section>
+          {/* 画像 */}
+          <Gazo
+            src="" // "https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
+            alt="小林響"
+            caption="小林響"
+            offsetX={270}
+            offsetY={20}
+            contrast={50}
+          />
+        </div>
+
+       
+           
+            
+          
+         
       </main>
     </div>
   );
