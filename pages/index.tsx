@@ -64,9 +64,10 @@ const App = () => {
           XR系に力を入れています！
         </p>
         <div style={{ marginTop: "20px" }}>
+          {/* 画像のURLを指定 */}
           <img
-            src="/your-image-path.jpg"
-            alt="Your Image"
+            src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
+            alt="小林響"
             style={{
               width: "300px",
               height: "auto",
