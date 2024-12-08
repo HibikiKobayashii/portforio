@@ -81,10 +81,36 @@ const App = () => {
         {/* スキルセクション */}
         <section id="skills" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#fff", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
           <h2 style={{ marginBottom: "20px" }}>スキル</h2>
-          <ul style={{ listStyleType: "none", padding: 0 }}>
-            <li>HTML, CSS, JavaScript (少し触れている)</li>
-            <li>React, Next.js (使い始めたばかり)</li>
-          </ul>
+          <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: "20px" }}>
+            <thead>
+              <tr>
+                <th style={{ padding: "10px", border: "1px solid #ddd", backgroundColor: "#f4f4f4" }}>技術</th>
+                <th style={{ padding: "10px", border: "1px solid #ddd", backgroundColor: "#f4f4f4" }}>レベル</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>HTML</td>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>初心者</td>
+              </tr>
+              <tr>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>CSS</td>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>初心者</td>
+              </tr>
+              <tr>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>JavaScript</td>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>中級者</td>
+              </tr>
+              <tr>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>React</td>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>使い始めた</td>
+              </tr>
+              <tr>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>Next.js</td>
+                <td style={{ padding: "10px", border: "1px solid #ddd" }}>使い始めた</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         {/* 趣味セクション */}
