@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../app/components/Header";
-import Gazo from "../app/components/gazo"; // Gazoコンポーネントが必要ならそのまま残します
+import Gazo from "../app/components/gazo";
 
 const HorizontalBar: React.FC<{ width: string; height: string; color: string }> = ({
   width,
