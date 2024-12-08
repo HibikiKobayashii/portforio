@@ -41,7 +41,7 @@ const Home = () => {
             XR系に力を入れています！
           </h2>
         </div>
-        <div style={{ marginTop: "20px" }}>
+        <div style={{ marginTop: "20px", display: "flex", justifyContent: "flex-end" }}>
           {/* next/image を使用して画像を最適化 */}
           <Image
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
