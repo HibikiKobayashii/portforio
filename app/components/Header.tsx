@@ -6,7 +6,6 @@ const Header: React.FC = () => {
   return (
     <header style={headerStyle}>
       <div style={containerStyle}>
-        {/* logoStyle に位置調整用のプロパティを追加 */}
         <h1 style={logoStyle}>ポートフォリオ</h1>
         <nav>
           <ul style={navListStyle}>
@@ -25,7 +24,6 @@ const Header: React.FC = () => {
                 Contact
               </a>
             </li>
-           
           </ul>
         </nav>
       </div>
@@ -40,24 +38,20 @@ const headerStyle: React.CSSProperties = {
   position: "sticky",
   top: 0,
   zIndex: 1000,
-  width: "100%", // ヘッダーをページ全体に広げる
-  margin: 0, // 余白をゼロにする
+  width: "100%", // ヘッダーを画面全幅に
 };
 
 const containerStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  maxWidth: "1200px",
-  margin: "0 auto",
+  margin: "0 auto", // 要素を中央揃え
+  maxWidth: "1200px", // コンテンツの最大幅を指定
 };
 
 const logoStyle: React.CSSProperties = {
   fontSize: "1.5rem",
   margin: 0,
-  position: "relative", // 相対位置を設定
-  top: "0px", // 下に10px移動
-  left: "-100px", // 右に20px移動
 };
 
 const navListStyle: React.CSSProperties = {
@@ -77,9 +71,6 @@ const linkStyle: React.CSSProperties = {
   textDecoration: "none",
   fontSize: "1rem",
   transition: "color 0.3s ease",
-  position: "relative", // 相対位置を設定
-  top: "0px", // 下に5px移動
-  left: "80px", // 右に10px移動
 };
 
 export default Header;
