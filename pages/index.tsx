@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../app/components/Header";
-import Gazo from "../app/components/gazo";
+import Image from "next/image";  // next/image をインポート
 
 const HorizontalBar: React.FC<{ width: string; height: string; color: string }> = ({
   width,
@@ -36,13 +36,13 @@ const Home = () => {
           </h2>
         </div>
         <div style={{ marginTop: "20px" }}>
-          <img
+          {/* next/image を使用して画像を最適化 */}
+          <Image
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt="小林響"
+            width={300}
+            height={400}
             style={{
-              width: "300px",
-              height: "400px",
-              objectFit: "cover", // 画像のアスペクト比を維持
               borderRadius: "10px",
               border: "1px solid #333",
             }}
