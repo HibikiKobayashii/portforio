@@ -5,7 +5,7 @@ const Header = () => {
     <header
       style={{
         backgroundColor: "#08081a", // 背景色を #08081a に
-        color: "#0095d9", // 文字色を #0095d9 に
+        color: "#a0d8ef", // 文字色を #a0d8ef に
         padding: "10px 20px",
         position: "fixed",
         top: 0,
@@ -17,9 +17,9 @@ const Header = () => {
       <nav style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ fontSize: "18px", fontWeight: "bold" }}>ポートフォリオ</div>
         <div>
-          <a href="#home" style={{ margin: "0 10px", color: "#0095d9", textDecoration: "none" }}>Home</a>
-          <a href="#biography" style={{ margin: "0 10px", color: "#0095d9", textDecoration: "none" }}>Biography</a>
-          <a href="#contact" style={{ margin: "0 10px", color: "#0095d9", textDecoration: "none" }}>Contact</a>
+          <a href="#home" style={{ margin: "0 10px", color: "#a0d8ef", textDecoration: "none" }}>Home</a>
+          <a href="#biography" style={{ margin: "0 10px", color: "#a0d8ef", textDecoration: "none" }}>Biography</a>
+          <a href="#contact" style={{ margin: "0 10px", color: "#a0d8ef", textDecoration: "none" }}>Contact</a>
         </div>
       </nav>
     </header>
@@ -35,7 +35,7 @@ const App = () => {
         fontFamily: "Arial, sans-serif",
         boxSizing: "border-box",
         backgroundColor: "#08081a", // 背景色を #08081a に
-        color: "#0095d9", // 文字色を #0095d9 に
+        color: "#a0d8ef", // 文字色を #a0d8ef に
       }}
     >
       {/* CSSリセットを適用 */}
@@ -59,8 +59,8 @@ const App = () => {
           minHeight: "100vh",
         }}
       >
-        <h1 style={{ margin: "20px 0" }}>I am an IoT Student !!</h1>
-        <p style={{ fontSize: "18px" }}>
+        <h1 style={{ margin: "20px 0", color: "#a0d8ef" }}>I am an IoT Student !!</h1>
+        <p style={{ fontSize: "18px", color: "#a0d8ef" }}>
           開志専門職大学でIoTを学んでいる小林響と申します！ <br />
           XR系に力を入れています！
         </p>
@@ -74,7 +74,7 @@ const App = () => {
               width: "300px",
               height: "auto",
               borderRadius: "10px",
-              border: "1px solid #0095d9", // ボーダー色を文字色に合わせる
+              border: "1px solid #a0d8ef", // ボーダー色を文字色に合わせる
             }}
           />
         </div>
