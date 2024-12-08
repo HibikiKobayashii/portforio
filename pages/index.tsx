@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header";
-import TextContent from "../components/TextContent"; // 文字部分のコンポーネント
-import SkillDescription from "../components/SkillDescription"; // 右側文字のコンポーネント
+import Header from "@/components/Header"; // エイリアスを使ってHeaderをインポート
+import TextContent from "@/components/TextContent"; // エイリアスを使ってTextContentをインポート
+import SkillDescription from "@/components/SkillDescription"; // エイリアスを使ってSkillDescriptionをインポート
 
 const App = () => {
   return (
@@ -28,7 +28,7 @@ const App = () => {
         `}
       </style>
 
-      <Header />
+      <Header /> {/* ヘッダーコンポーネント */}
       <main
         style={{
           paddingTop: "70px", // ヘッダー分のスペースを確保
