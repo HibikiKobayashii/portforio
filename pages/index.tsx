@@ -17,7 +17,7 @@ const App = () => {
     >
       {/* CSSリセットを適用 */}
       <style>
-        {
+        {`
           html, body {
             margin: 0;
             padding: 0;
@@ -25,7 +25,7 @@ const App = () => {
           * {
             box-sizing: border-box;
           }
-        }
+        `}
       </style>
 
       <Header /> {/* ヘッダーコンポーネント */}
