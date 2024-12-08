@@ -80,7 +80,7 @@ const App = () => {
         </div>
 
         {/* スキルセクション */}
-        <section id="skills" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#16160e", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", display: "flex", justifyContent: "space-between" }}>
+        <section id="skills" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#000b00", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", display: "flex", justifyContent: "space-between" }}>
           <div style={{ flex: 1, paddingRight: "20px" }}>
             <h2 style={{ marginBottom: "20px" }}>スキル</h2>
             <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: "20px" }}>
