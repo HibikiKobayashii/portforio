@@ -4,8 +4,8 @@ const Header = () => {
   return (
     <header
       style={{
-        backgroundColor: "#333",
-        color: "#fff",
+        backgroundColor: "#f0f0f0", // 背景色を反転
+        color: "#333", // 文字色を反転
         padding: "10px 20px",
         position: "fixed",
         top: 0,
@@ -17,9 +17,9 @@ const Header = () => {
       <nav style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ fontSize: "18px", fontWeight: "bold" }}>ポートフォリオ</div>
         <div>
-          <a href="#home" style={{ margin: "0 10px", color: "#fff", textDecoration: "none" }}>Home</a>
-          <a href="#biography" style={{ margin: "0 10px", color: "#fff", textDecoration: "none" }}>Biography</a>
-          <a href="#contact" style={{ margin: "0 10px", color: "#fff", textDecoration: "none" }}>Contact</a>
+          <a href="#home" style={{ margin: "0 10px", color: "#333", textDecoration: "none" }}>Home</a>
+          <a href="#biography" style={{ margin: "0 10px", color: "#333", textDecoration: "none" }}>Biography</a>
+          <a href="#contact" style={{ margin: "0 10px", color: "#333", textDecoration: "none" }}>Contact</a>
         </div>
       </nav>
     </header>
@@ -34,6 +34,8 @@ const App = () => {
         padding: 0,
         fontFamily: "Arial, sans-serif",
         boxSizing: "border-box",
+        backgroundColor: "#333", // 背景色を反転
+        color: "#f0f0f0", // 文字色を反転
       }}
     >
       {/* CSSリセットを適用 */}
@@ -54,7 +56,6 @@ const App = () => {
         style={{
           paddingTop: "70px", // ヘッダー分のスペースを確保
           textAlign: "center",
-          backgroundColor: "#f0f0f0",
           minHeight: "100vh",
         }}
       >
@@ -73,42 +74,42 @@ const App = () => {
               width: "300px",
               height: "auto",
               borderRadius: "10px",
-              border: "1px solid #333",
+              border: "1px solid #f0f0f0", // ボーダー色を反転
             }}
           />
         </div>
 
         {/* スキルセクション */}
-        <section id="skills" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#fff", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", display: "flex", justifyContent: "space-between" }}>
+        <section id="skills" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#444", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", display: "flex", justifyContent: "space-between" }}>
           <div style={{ flex: 1, paddingRight: "20px" }}>
             <h2 style={{ marginBottom: "20px" }}>スキル</h2>
             <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: "20px" }}>
               <thead>
                 <tr>
-                  <th style={{ padding: "10px", border: "1px solid #ddd", backgroundColor: "#f4f4f4" }}>技術</th>
-                  <th style={{ padding: "10px", border: "1px solid #ddd", backgroundColor: "#f4f4f4" }}>レベル</th>
+                  <th style={{ padding: "10px", border: "1px solid #666", backgroundColor: "#333" }}>技術</th>
+                  <th style={{ padding: "10px", border: "1px solid #666", backgroundColor: "#333" }}>レベル</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>HTML</td>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>初心者</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>HTML</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>初心者</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>CSS</td>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>初心者</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>CSS</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>初心者</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>JavaScript</td>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>中級者</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>JavaScript</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>中級者</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>React</td>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>使い始めた</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>React</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>使い始めた</td>
                 </tr>
                 <tr>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>Next.js</td>
-                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>使い始めた</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>Next.js</td>
+                  <td style={{ padding: "10px", border: "1px solid #666" }}>使い始めた</td>
                 </tr>
               </tbody>
             </table>
@@ -126,7 +127,7 @@ const App = () => {
         </section>
 
         {/* 趣味セクション */}
-        <section id="hobbies" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#fff", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
+        <section id="hobbies" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#444", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
           <h2 style={{ marginBottom: "20px" }}>趣味</h2>
           <ul style={{ listStyleType: "none", padding: 0 }}>
             <li>スマートフォン</li>
