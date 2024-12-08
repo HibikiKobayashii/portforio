@@ -33,7 +33,7 @@ const Header: React.FC = () => {
 
 const headerStyle: React.CSSProperties = {
   backgroundColor: "#03090d",
-  color: "#bed3ca",
+  color: "#eaf4fc",
   padding: "10px 20px",
   position: "sticky",
   top: 0,
@@ -67,7 +67,7 @@ const navItemStyle: React.CSSProperties = {
 };
 
 const linkStyle: React.CSSProperties = {
-  color: "white",
+  color: "#eaf4fc",
   textDecoration: "none",
   fontSize: "1rem",
   transition: "color 0.3s ease",
