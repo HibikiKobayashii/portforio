@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 };
 
 const headerStyle: React.CSSProperties = {
-  backgroundColor: "#03090d",
+  backgroundColor: "#bed3ca",
   color: "white",
   padding: "10px 20px",
   position: "sticky",
