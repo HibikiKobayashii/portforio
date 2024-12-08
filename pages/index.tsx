@@ -58,7 +58,7 @@ const App = () => {
           style={{
             marginTop: "50px",
             padding: "20px",
-            backgroundColor: "#06131a",
+            backgroundColor: "#03090d",
             borderRadius: "10px",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             display: "flex",
