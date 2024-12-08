@@ -17,7 +17,7 @@ const App = () => {
     >
       {/* CSSリセットを適用 */}
       <style>
-        {`
+        {
           html, body {
             margin: 0;
             padding: 0;
@@ -25,7 +25,7 @@ const App = () => {
           * {
             box-sizing: border-box;
           }
-        `}
+        }
       </style>
 
       <Header /> {/* ヘッダーコンポーネント */}
@@ -65,14 +65,6 @@ const App = () => {
             justifyContent: "space-between",
           }}
         >
-          {/* スキルセクション上の中央文字 */}
-          <div style={{ textAlign: "center", width: "100%", marginBottom: "20px" }}>
-            <h2 style={{ color: "#7ebeab", fontSize: "2rem" }}>私のスキル</h2>
-            <p style={{ color: "#7ebeab", fontSize: "1rem" }}>
-              ここでは、私が習得している技術を紹介します。
-            </p>
-          </div>
-
           <div style={{ flex: 1, paddingRight: "20px" }}>
             <h2 style={{ marginBottom: "20px", color: "#7ebeab" }}>スキル</h2>
             <table
