@@ -4,8 +4,8 @@ const Header = () => {
   return (
     <header
       style={{
-        backgroundColor: "#f0f0f0", // 背景色を反転
-        color: "#333", // 文字色を反転
+        backgroundColor: "#180614", // 背景色を反転
+        color: "#9079ad", // 文字色を反転
         padding: "10px 20px",
         position: "fixed",
         top: 0,
