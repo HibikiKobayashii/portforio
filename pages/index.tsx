@@ -101,14 +101,7 @@ const App = () => {
                 <td style={{ padding: "10px", border: "1px solid #ddd" }}>JavaScript</td>
                 <td style={{ padding: "10px", border: "1px solid #ddd" }}>中級者</td>
               </tr>
-              <tr>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>React</td>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>使い始めた</td>
-              </tr>
-              <tr>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>Next.js</td>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>使い始めた</td>
-              </tr>
+              
             </tbody>
           </table>
         </section>
