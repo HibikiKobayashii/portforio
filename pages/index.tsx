@@ -34,8 +34,8 @@ const App = () => {
         padding: 0,
         fontFamily: "Arial, sans-serif",
         boxSizing: "border-box",
-        backgroundColor: "#333", // 背景色を反転
-        color: "#f0f0f0", // 文字色を反転
+        backgroundColor: "##180614", // 背景色を反転
+        color: "#9079ad", // 文字色を反転
       }}
     >
       {/* CSSリセットを適用 */}
