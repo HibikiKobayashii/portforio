@@ -1,76 +1,86 @@
 import React from "react";
-import Header from "../app/components/Header";
-import Image from "next/image";  // next/image をインポート
 
-const HorizontalBar: React.FC<{ width: string; height: string; color: string }> = ({
-  width,
-  height,
-  color,
-}) => {
+const Header = () => {
   return (
-    <div
+    <header
       style={{
-        width,
-        height,
-        backgroundColor: color,
-        margin: "0 auto", // 棒を中央揃え
+        backgroundColor: "#333",
+        color: "#fff",
+        padding: "10px 20px",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        zIndex: 1000,
       }}
-    ></div>
+    >
+      <nav style={{ display: "flex", justifyContent: "space-between" }}>
+        <div style={{ fontSize: "18px", fontWeight: "bold" }}>ポートフォリオ</div>
+        <div>
+          <a href="#home" style={{ margin: "0 10px", color: "#fff", textDecoration: "none" }}>Home</a>
+          <a href="#biography" style={{ margin: "0 10px", color: "#fff", textDecoration: "none" }}>Biography</a>
+          <a href="#contact" style={{ margin: "0 10px", color: "#fff", textDecoration: "none" }}>Contact</a>
+        </div>
+      </nav>
+    </header>
   );
 };
 
-const Home = () => {
+const App = () => {
   return (
-    <div style={{ backgroundColor: "#aliceblue", minHeight: "100vh", position: "relative" }}>
+    <div
+      style={{
+        margin: 0,
+        padding: 0,
+        fontFamily: "Arial, sans-serif",
+        boxSizing: "border-box",
+      }}
+    >
+      {/* CSSリセットを適用 */}
+      <style>
+        {`
+          html, body {
+            margin: 0;
+            padding: 0;
+          }
+          * {
+            box-sizing: border-box;
+          }
+        `}
+      </style>
+      
       <Header />
       <main
         style={{
-          padding: "20px",
+          paddingTop: "70px", // ヘッダー分のスペースを確保
           textAlign: "center",
-          paddingTop: "80px", // ヘッダーの高さ分のスペースを確保 (調整が必要な場合は変更)
+          backgroundColor: "#f0f0f0",
+          minHeight: "100vh",
         }}
       >
-        <div>
-          <h1 style={{ fontSize: "calc(2rem + 1vw)", marginBottom: "10px" }}>
-            I am an IoT Student !!
-          </h1>
-          <HorizontalBar width="80%" height="5px" color="black" />
-          <h2 style={{ fontSize: "calc(1rem + 0.5vw)", marginTop: "20px" }}>
-            開志専門職大学でIoTを学んでいる小林響と申します！
-            <br />
-            XR系に力を入れています！
-          </h2>
-        </div>
+        <h1 style={{ margin: "20px 0" }}>I am an IoT Student !!</h1>
+        <p style={{ fontSize: "18px" }}>
+          開志専門職大学でIoTを学んでいる小林響と申します！ <br />
+          XR系に力を入れています！
+        </p>
         <div style={{ marginTop: "20px" }}>
-          {/* next/image を使用して画像を最適化 */}
-          <Image
-            src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
-            alt="小林響"
-            width={300}
-            height={400}
+          <img
+            src="/your-image-path.jpg"
+            alt="Your Image"
             style={{
+              width: "300px",
+              height: "auto",
               borderRadius: "10px",
               border: "1px solid #333",
             }}
           />
         </div>
-        {/* 背景画像 */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundImage:
-              "url('https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/1.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            zIndex: -1,
-          }}
-        ></div>
       </main>
     </div>
+  );
+};
+
+export default App;
   );
 };
 
