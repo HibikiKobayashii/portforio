@@ -79,31 +79,50 @@ const App = () => {
         </div>
 
         {/* スキルセクション */}
-        <section id="skills" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#fff", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
-          <h2 style={{ marginBottom: "20px" }}>スキル</h2>
-          <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: "20px" }}>
-            <thead>
-              <tr>
-                <th style={{ padding: "10px", border: "1px solid #ddd", backgroundColor: "#f4f4f4" }}>技術</th>
-                <th style={{ padding: "10px", border: "1px solid #ddd", backgroundColor: "#f4f4f4" }}>レベル</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>HTML</td>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>初心者</td>
-              </tr>
-              <tr>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>CSS</td>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>初心者</td>
-              </tr>
-              <tr>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>JavaScript</td>
-                <td style={{ padding: "10px", border: "1px solid #ddd" }}>中級者</td>
-              </tr>
-              
-            </tbody>
-          </table>
+        <section id="skills" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#fff", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", display: "flex", justifyContent: "space-between" }}>
+          <div style={{ flex: 1, paddingRight: "20px" }}>
+            <h2 style={{ marginBottom: "20px" }}>スキル</h2>
+            <table style={{ width: "100%", borderCollapse: "collapse", marginBottom: "20px" }}>
+              <thead>
+                <tr>
+                  <th style={{ padding: "10px", border: "1px solid #ddd", backgroundColor: "#f4f4f4" }}>技術</th>
+                  <th style={{ padding: "10px", border: "1px solid #ddd", backgroundColor: "#f4f4f4" }}>レベル</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>HTML</td>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>初心者</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>CSS</td>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>初心者</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>JavaScript</td>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>中級者</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>React</td>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>使い始めた</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>Next.js</td>
+                  <td style={{ padding: "10px", border: "1px solid #ddd" }}>使い始めた</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          {/* 右側の文字部分 */}
+          <div style={{ flex: 1 }}>
+            <h2 style={{ marginBottom: "20px" }}>スキルの説明</h2>
+            <p style={{ fontSize: "16px", lineHeight: "1.6" }}>
+              ここでは、現在私が使える技術とそのレベルを紹介しています。HTMLとCSSは初心者レベルで、JavaScriptは中級者として扱えます。ReactとNext.jsは使い始めたばかりですが、実際のプロジェクトで学びながら進めています。
+            </p>
+            <p style={{ fontSize: "16px", lineHeight: "1.6" }}>
+              これらの技術は、今後さらに深めていきたい分野であり、特にReactとNext.jsは次のステップとして重視しています。
+            </p>
+          </div>
         </section>
 
         {/* 趣味セクション */}
