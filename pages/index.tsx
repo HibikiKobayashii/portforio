@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";  // next/image をインポート
 
 const Header = () => {
   return (
@@ -64,19 +63,38 @@ const App = () => {
           開志専門職大学でIoTを学んでいる小林響と申します！ <br />
           XR系に力を入れています！
         </p>
+        
+        {/* 画像の表示 */}
         <div style={{ marginTop: "20px" }}>
-          {/* next/image を使用して画像を最適化 */}
-          <Image
+          <img
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt="小林響"
-            width={300}
-            height={400}
             style={{
+              width: "300px",
+              height: "auto",
               borderRadius: "10px",
               border: "1px solid #333",
             }}
           />
         </div>
+
+        {/* スキルセクション */}
+        <section id="skills" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#fff", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
+          <h2 style={{ marginBottom: "20px" }}>スキル</h2>
+          <ul style={{ listStyleType: "none", padding: 0 }}>
+            <li>HTML, CSS, JavaScript (少し触れている)</li>
+            <li>React, Next.js (使い始めたばかり)</li>
+          </ul>
+        </section>
+
+        {/* 趣味セクション */}
+        <section id="hobbies" style={{ marginTop: "50px", padding: "20px", backgroundColor: "#fff", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
+          <h2 style={{ marginBottom: "20px" }}>趣味</h2>
+          <ul style={{ listStyleType: "none", padding: 0 }}>
+            <li>スマートフォン</li>
+            <li>ガジェット</li>
+          </ul>
+        </section>
       </main>
     </div>
   );
