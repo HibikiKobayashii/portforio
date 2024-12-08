@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "@/components/Header"; // エイリアスを使ってHeaderをインポート
-import TextContent from "@/components/TextContent"; // エイリアスを使ってTextContentをインポート
-import SkillDescription from "@/components/SkillDescription"; // エイリアスを使ってSkillDescriptionをインポート
+import Header from "../app/components/Header"; // エイリアスを使ってHeaderをインポート
+import TextContent from "../app/components/TextContent"; // エイリアスを使ってTextContentをインポート
+import SkillDescription from "../app/components/SkillDescription"; // エイリアスを使ってSkillDescriptionをインポート
 
 const App = () => {
   return (
