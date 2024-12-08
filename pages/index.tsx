@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../app/components/Header";
+import Gazo from "../app/components/gazo"; // Gazoコンポーネントが必要ならそのまま残します
 
-// HorizontalBarコンポーネントはそのままにしておきます
 const HorizontalBar: React.FC<{ width: string; height: string; color: string }> = ({
   width,
   height,
@@ -19,7 +19,7 @@ const HorizontalBar: React.FC<{ width: string; height: string; color: string }> 
   );
 };
 
-function Home() {
+const Home = () => {
   return (
     <div style={{ backgroundColor: "#aliceblue", minHeight: "100vh", position: "relative" }}>
       <Header />
@@ -36,7 +36,6 @@ function Home() {
           </h2>
         </div>
         <div style={{ marginTop: "20px" }}>
-          {/* 画像を直接 <img> タグで表示する */}
           <img
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt="小林響"
@@ -67,7 +66,7 @@ function Home() {
       </main>
     </div>
   );
-}
+};
 
 export default Home;
 export default App;
