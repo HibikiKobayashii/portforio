@@ -27,7 +27,7 @@ const Home = () => {
         style={{
           padding: "20px",
           textAlign: "center",
-          paddingTop: "80px", // ヘッダーの高さ分のスペースを確保 (調整が必要な場合は変更)
+          paddingTop: "80px", // ヘッダーの高さ分のスペースを確保
         }}
       >
         <div>
@@ -41,7 +41,7 @@ const Home = () => {
             XR系に力を入れています！
           </h2>
         </div>
-        <div style={{ marginTop: "20px", display: "flex", justifyContent: "flex-end" }}>
+        <div style={{ marginTop: "20px", width: "100%", display: "flex", justifyContent: "flex-end" }}>
           {/* next/image を使用して画像を最適化 */}
           <Image
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
@@ -51,6 +51,7 @@ const Home = () => {
             style={{
               borderRadius: "10px",
               border: "1px solid #333",
+              objectFit: "cover", // 画像のオーバーフローを防止
             }}
           />
         </div>
