@@ -23,7 +23,13 @@ const Home = () => {
   return (
     <div style={{ backgroundColor: "#aliceblue", minHeight: "100vh", position: "relative" }}>
       <Header />
-      <main style={{ padding: "20px", textAlign: "center" }}>
+      <main
+        style={{
+          padding: "20px",
+          textAlign: "center",
+          paddingTop: "80px", // ヘッダーの高さ分のスペースを確保 (調整が必要な場合は変更)
+        }}
+      >
         <div>
           <h1 style={{ fontSize: "calc(2rem + 1vw)", marginBottom: "10px" }}>
             I am an IoT Student !!
