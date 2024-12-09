@@ -63,23 +63,53 @@ const App = () => {
     backgroundColor: "#03090d",
     borderRadius: "10px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-    display: "flex",
-    flexDirection: "column", // 縦方向に配置
-    alignItems: "center",    // 子要素を中央揃え
+    display: "flex", // 横並びにする
+    justifyContent: "space-between", // 子要素を左右に配置
+    alignItems: "center", // 子要素の高さを揃える
   }}
 >
-  {/* スキル見出し */}
-  <h1
+  {/* 左側の画像 */}
+  <div
     style={{
-      marginBottom: "20px",
-      color: "#7ebeab",
-      textAlign: "center", // 中央揃え
+      display: "flex", // 画像を横並びに
+      flexDirection: "column", // 画像を縦方向に配置
+      alignItems: "center", // 中央揃え
+      gap: "10px", // 画像間の間隔
     }}
   >
-    スキル
-  </h1>
+    <img
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/react.jpg"
+      alt="React"
+      style={{
+        width: "150px",
+        height: "auto",
+        borderRadius: "10px",
+        border: "1px solid #7ebeab",
+      }}
+    />
+    <img
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/nextjs.jpg"
+      alt="Next.js"
+      style={{
+        width: "150px",
+        height: "auto",
+        borderRadius: "10px",
+        border: "1px solid #7ebeab",
+      }}
+    />
+  </div>
 
-  <div style={{ width: "100%", maxWidth: "600px" }}> {/* 表の幅を制限 */}
+  {/* 表のセクション */}
+  <div style={{ flex: 1, marginLeft: "20px" }}>
+    <h1
+      style={{
+        marginBottom: "20px",
+        color: "#7ebeab",
+        textAlign: "center",
+      }}
+    >
+      スキル
+    </h1>
     <table
       style={{
         width: "100%",
@@ -215,7 +245,6 @@ const App = () => {
       </tbody>
     </table>
   </div>
-  <SkillDescription /> {/* 右側文字のコンポーネント */}
 </section>
       </main>
     </div>
