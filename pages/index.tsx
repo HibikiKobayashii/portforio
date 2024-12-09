@@ -39,6 +39,13 @@ const App = () => {
             #skills .image-container {
               width: 90%; /* 幅を縮小 */
             }
+            #new-section {
+              flex-direction: column; /* 縦に配置 */
+            }
+            #new-section .left,
+            #new-section .right {
+              width: 100%;
+            }
           }
         `}
       </style>
@@ -262,9 +269,56 @@ const App = () => {
             />
           </div>
         </section>
+
+        {/* 新しいセクション */}
+        <section
+          id="new-section"
+          style={{
+            marginTop: "50px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            backgroundColor: "#1a1a2e",
+            padding: "20px",
+            borderRadius: "10px",
+          }}
+        >
+          {/* 左側: 画像 */}
+          <div
+            className="left"
+            style={{
+              width: "50%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              src="URL_OF_IMAGE_HERE"
+              alt="新しい画像"
+              style={{
+                width: "90%",
+                height: "auto",
+                borderRadius: "10px",
+              }}
+            />
+          </div>
+
+          {/* 右側: テキスト */}
+          <div
+            className="right"
+            style={{
+              width: "45%",
+              color: "#a0d8ef",
+              textAlign: "left",
+              lineHeight: "1.6",
+            }}
+          >
+            <h2 style={{ color: "#7ebeab" }}>セクションタイトル</h2>
+            <p>ここに文章を記載できます。自由に内容を追加してください。</p>
+          </div>
+        </section>
       </main>
     </div>
-    <p>趣味</p>
   );
 };
 
