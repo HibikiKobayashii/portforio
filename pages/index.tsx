@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../app/components/Header"; // Headerコンポーネント
-import TextContent from "../app/components/TextContent"; // TextContentコンポーネント
-import SkillDescription from "../app/components/SkillDescription"; // SkillDescriptionコンポーネント
-import Image from "next/image"; // Next.jsのImageコンポーネント
+import Header from "../app/components/Header";
+import TextContent from "../app/components/TextContent";
+import SkillDescription from "../app/components/SkillDescription";
+import Image from "next/image";
 
 const App = () => {
   return (
@@ -12,11 +12,10 @@ const App = () => {
         padding: 0,
         fontFamily: "Arial, sans-serif",
         boxSizing: "border-box",
-        backgroundColor: "#08081a", // 背景色
-        color: "#a0d8ef", // 文字色
+        backgroundColor: "#08081a",
+        color: "#a0d8ef",
       }}
     >
-      {/* CSSリセット */}
       <style>
         {`
           html, body {
@@ -29,7 +28,7 @@ const App = () => {
         `}
       </style>
 
-      <Header /> {/* ヘッダー */}
+      <Header />
       <main
         style={{
           paddingTop: "70px",
@@ -37,7 +36,7 @@ const App = () => {
           minHeight: "100vh",
         }}
       >
-        <TextContent /> {/* 文章コンポーネント */}
+        <TextContent />
 
         {/* スキルセクション */}
         <section
@@ -50,20 +49,21 @@ const App = () => {
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             display: "flex",
             justifyContent: "space-between", // 左右に分割
-            alignItems: "center", // 中央揃え
+            alignItems: "center",
           }}
         >
-          {/* 左側: 画像 */}
+          {/* 右側: 画像 */}
           <div
             style={{
               display: "flex",
               flexDirection: "column",
               gap: "20px",
               alignItems: "center",
+              width: "40%", // 横幅を設定
             }}
           >
             <Image
-              src="/gazo/react.jpg" // publicフォルダ内の画像
+              src="/gazo/react.jpg"
               alt="React"
               width={150}
               height={150}
@@ -73,7 +73,7 @@ const App = () => {
               }}
             />
             <Image
-              src="/gazo/nextjs.jpg" // publicフォルダ内の画像
+              src="/gazo/nextjs.jpg"
               alt="Next.js"
               width={150}
               height={150}
@@ -84,8 +84,8 @@ const App = () => {
             />
           </div>
 
-          {/* 右側: スキル表と説明 */}
-          <div style={{ width: "60%" }}>
+          {/* 左側: スキル表と説明 */}
+          <div style={{ width: "55%" }}>
             <h1
               style={{
                 marginBottom: "20px",
@@ -106,7 +106,7 @@ const App = () => {
                 <tr>
                   <th
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       backgroundColor: "#000000",
                       color: "#7ebeab",
@@ -116,7 +116,7 @@ const App = () => {
                   </th>
                   <th
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       backgroundColor: "#000000",
                       color: "#7ebeab",
@@ -130,7 +130,7 @@ const App = () => {
                 <tr>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -139,7 +139,7 @@ const App = () => {
                   </td>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -150,7 +150,7 @@ const App = () => {
                 <tr>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -159,7 +159,7 @@ const App = () => {
                   </td>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -170,7 +170,7 @@ const App = () => {
                 <tr>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -179,7 +179,7 @@ const App = () => {
                   </td>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -190,7 +190,7 @@ const App = () => {
                 <tr>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -199,7 +199,7 @@ const App = () => {
                   </td>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -210,7 +210,7 @@ const App = () => {
                 <tr>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -219,7 +219,7 @@ const App = () => {
                   </td>
                   <td
                     style={{
-                      padding: "10px",
+                      padding: "15px",
                       border: "1px solid #7ebeab",
                       color: "#7ebeab",
                     }}
@@ -229,7 +229,7 @@ const App = () => {
                 </tr>
               </tbody>
             </table>
-            <SkillDescription /> {/* スキル説明を表示 */}
+            <SkillDescription />
           </div>
         </section>
       </main>
