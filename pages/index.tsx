@@ -167,7 +167,7 @@ const App = () => {
                       color: "#7ebeab",
                     }}
                   >
-                    React
+                    React(JS)
                   </td>
                   <td
                     style={{
@@ -187,7 +187,7 @@ const App = () => {
                       color: "#7ebeab",
                     }}
                   >
-                    Next.js
+                    Next.js(JS)
                   </td>
                   <td
                     style={{
