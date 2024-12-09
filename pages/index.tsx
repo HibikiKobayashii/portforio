@@ -241,7 +241,7 @@ const App = () => {
             }}
           >
             <Image
-              src="/gazo/react.jpg"
+              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/react.jpg"
               alt="React"
               width={200}
               height={200}
@@ -251,7 +251,7 @@ const App = () => {
               }}
             />
             <Image
-              src="/gazo/nextjs.jpg"
+              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/nextjs.jpg"
               alt="Next.js"
               width={200}
               height={200}
