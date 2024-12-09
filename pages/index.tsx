@@ -264,6 +264,7 @@ const App = () => {
         </section>
       </main>
     </div>
+    <p>趣味</p>
   );
 };
 
