@@ -55,167 +55,170 @@ const App = () => {
          
 
         {/* スキルセクション */}
-        <section
-          id="skills"
-          style={{
-            marginTop: "50px",
-            padding: "20px",
-            backgroundColor: "#03090d",
-            borderRadius: "10px",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-        <h1
+       <section
+  id="skills"
   style={{
-    marginBottom: "20px",
-    color: "#7ebeab",
-    textAlign: "center", // 水平方向に中央揃え
+    marginTop: "50px",
+    padding: "20px",
+    backgroundColor: "#03090d",
+    borderRadius: "10px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    display: "flex",
+    justifyContent: "space-between",
+    position: "relative", // 子要素の絶対位置を基準にする
   }}
 >
-  スキル
-</h1>
-          
-          <div style={{ flex: 1, paddingRight: "20px" }}>
-      
-            <table
-              style={{
-                width: "100%",
-                borderCollapse: "collapse",
-                marginBottom: "20px",
-              }}
-            >
-              <thead>
-                <tr>
-                  <th
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      backgroundColor: "#000000",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    技術
-                  </th>
-                  <th
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      backgroundColor: "#000000",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    レベル
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    HTML
-                  </td>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    初心者
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    CSS
-                  </td>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    初心者
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    JavaScript
-                  </td>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    中級者
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    React(JS)
-                  </td>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    使い始めた
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    Next.js(JS)
-                  </td>
-                  <td
-                    style={{
-                      padding: "10px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    使い始めた
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <SkillDescription /> {/* 右側文字のコンポーネント */}
-        </section>
+  {/* スキル見出し */}
+  <h1
+    style={{
+      position: "absolute", // 絶対位置に設定
+      top: "-10px",         // 親要素からの上部位置調整
+      right: "20px",        // 親要素からの右部位置調整
+      marginBottom: "20px",
+      color: "#7ebeab",
+    }}
+  >
+    スキル
+  </h1>
+
+  <div style={{ flex: 1, paddingRight: "20px" }}>
+    <table
+      style={{
+        width: "100%",
+        borderCollapse: "collapse",
+        marginBottom: "20px",
+      }}
+    >
+      <thead>
+        <tr>
+          <th
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              backgroundColor: "#000000",
+              color: "#7ebeab",
+            }}
+          >
+            技術
+          </th>
+          <th
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              backgroundColor: "#000000",
+              color: "#7ebeab",
+            }}
+          >
+            レベル
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            HTML
+          </td>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            初心者
+          </td>
+        </tr>
+        <tr>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            CSS
+          </td>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            初心者
+          </td>
+        </tr>
+        <tr>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            JavaScript
+          </td>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            中級者
+          </td>
+        </tr>
+        <tr>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            React(JS)
+          </td>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            使い始めた
+          </td>
+        </tr>
+        <tr>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            Next.js(JS)
+          </td>
+          <td
+            style={{
+              padding: "10px",
+              border: "1px solid #7ebeab",
+              color: "#7ebeab",
+            }}
+          >
+            使い始めた
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <SkillDescription /> {/* 右側文字のコンポーネント */}
+</section>
       </main>
     </div>
   );
