@@ -52,6 +52,16 @@ const App = () => {
           />
         </div>
 
+                 <h1
+  style={{
+    marginBottom: "20px",
+    color: "#7ebeab",
+    textAlign: "center", // 水平方向に中央揃え
+  }}
+>
+  スキル
+</h1>
+
         {/* スキルセクション */}
         <section
           id="skills"
