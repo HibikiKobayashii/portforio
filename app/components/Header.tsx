@@ -1,76 +1,48 @@
-"use client";
+import Link from "next/link"; // Next.jsのリンクコンポーネントをインポート
 
-import React from "react";
-
-const Header: React.FC = () => {
+const Header = () => {
   return (
-    <header style={headerStyle}>
-      <div style={containerStyle}>
-        <h1 style={logoStyle}>ポートフォリオ</h1>
-        <nav>
-          <ul style={navListStyle}>
-            <li style={navItemStyle}>
-              <a href="#" style={linkStyle}>
-                Home
-              </a>
-            </li>
-            <li style={navItemStyle}>
-              <a href="#" style={linkStyle}>
-                Biography
-              </a>
-            </li>
-            <li style={navItemStyle}>
-              <a href="#" style={linkStyle}>
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header
+      style={{
+        position: "fixed",
+        top: 0,
+        width: "100%",
+        backgroundColor: "#08081a",
+        padding: "10px 20px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        zIndex: 1000,
+      }}
+    >
+      <h1 style={{ color: "#a0d8ef", fontSize: "24px" }}>My Portfolio</h1>
+      <nav>
+        <ul
+          style={{
+            listStyle: "none",
+            margin: 0,
+            padding: 0,
+            display: "flex",
+            gap: "20px",
+          }}
+        >
+          <li>
+            <Link href="/" style={{ color: "#a0d8ef", textDecoration: "none" }}>
+              ホーム
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact" // contact.tsxへのリンク
+              style={{ color: "#a0d8ef", textDecoration: "none" }}
+            >
+              お問い合わせ
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
-};
-
-const headerStyle: React.CSSProperties = {
-  backgroundColor: "#03090d",
-  color: "#eaf4fc",
-  padding: "10px 20px",
-  position: "sticky",
-  top: 0,
-  zIndex: 1000,
-  width: "100%", // ヘッダーを画面全幅に
-};
-
-const containerStyle: React.CSSProperties = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  margin: "0 auto", // 要素を中央揃え
-  maxWidth: "1200px", // コンテンツの最大幅を指定
-};
-
-const logoStyle: React.CSSProperties = {
-  fontSize: "1.5rem",
-  margin: 0,
-};
-
-const navListStyle: React.CSSProperties = {
-  listStyle: "none",
-  display: "flex",
-  gap: "15px",
-  margin: 0,
-  padding: 0,
-};
-
-const navItemStyle: React.CSSProperties = {
-  display: "inline",
-};
-
-const linkStyle: React.CSSProperties = {
-  color: "#eaf4fc",
-  textDecoration: "none",
-  fontSize: "1rem",
-  transition: "color 0.3s ease",
 };
 
 export default Header;
