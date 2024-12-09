@@ -64,24 +64,22 @@ const App = () => {
     borderRadius: "10px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
     display: "flex",
-    justifyContent: "space-between",
-    position: "relative", // 子要素の絶対位置を基準にする
+    flexDirection: "column", // 縦方向に配置
+    alignItems: "center",    // 子要素を中央揃え
   }}
 >
   {/* スキル見出し */}
   <h1
     style={{
-      position: "absolute", // 絶対位置に設定
-      top: "-10px",         // 親要素からの上部位置調整
-      right: "20px",        // 親要素からの右部位置調整
       marginBottom: "20px",
       color: "#7ebeab",
+      textAlign: "center", // 中央揃え
     }}
   >
     スキル
   </h1>
 
-  <div style={{ flex: 1, paddingRight: "20px" }}>
+  <div style={{ width: "100%", maxWidth: "600px" }}> {/* 表の幅を制限 */}
     <table
       style={{
         width: "100%",
