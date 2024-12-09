@@ -38,6 +38,20 @@ const App = () => {
       >
         <TextContent />
 
+        {/* hibiki.jpg画像を表示 */}
+        <div style={{ marginTop: "20px" }}>
+          <Image
+            src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
+            alt="小林響"
+            width={300}
+            height={300}
+            style={{
+              borderRadius: "10px",
+              border: "1px solid #a0d8ef",
+            }}
+          />
+        </div>
+
         {/* スキルセクション */}
         <section
           id="skills"
@@ -49,43 +63,11 @@ const App = () => {
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             display: "flex",
             justifyContent: "space-between", // 左右に分割
-            alignItems: "center",
+            alignItems: "flex-start", // 左上寄せ
           }}
         >
-          {/* 右側: 画像 */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              alignItems: "center",
-              width: "40%", // 横幅を設定
-            }}
-          >
-            <Image
-              src="/gazo/react.jpg"
-              alt="React"
-              width={150}
-              height={150}
-              style={{
-                borderRadius: "10px",
-                border: "1px solid #7ebeab",
-              }}
-            />
-            <Image
-              src="/gazo/nextjs.jpg"
-              alt="Next.js"
-              width={150}
-              height={150}
-              style={{
-                borderRadius: "10px",
-                border: "1px solid #7ebeab",
-              }}
-            />
-          </div>
-
-          {/* 左側: スキル表と説明 */}
-          <div style={{ width: "55%" }}>
+          {/* 左側: スキル表 */}
+          <div style={{ width: "65%" }}> {/* 横幅を広く調整 */}
             <h1
               style={{
                 marginBottom: "20px",
@@ -230,6 +212,38 @@ const App = () => {
               </tbody>
             </table>
             <SkillDescription />
+          </div>
+
+          {/* 右側: ReactとNext.js画像 */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+              alignItems: "center",
+              width: "30%", // 画像エリアの横幅
+            }}
+          >
+            <Image
+              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/react.jpg"
+              alt="React"
+              width={200}
+              height={200}
+              style={{
+                borderRadius: "10px",
+                border: "1px solid #7ebeab",
+              }}
+            />
+            <Image
+              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/nextjs.jpg"
+              alt="Next.js"
+              width={200}
+              height={200}
+              style={{
+                borderRadius: "10px",
+                border: "1px solid #7ebeab",
+              }}
+            />
           </div>
         </section>
       </main>
