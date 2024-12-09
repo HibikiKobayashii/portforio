@@ -52,15 +52,7 @@ const App = () => {
           />
         </div>
 
-                 <h1
-  style={{
-    marginBottom: "20px",
-    color: "#7ebeab",
-    textAlign: "center", // 水平方向に中央揃え
-  }}
->
-  スキル
-</h1>
+         
 
         {/* スキルセクション */}
         <section
@@ -75,8 +67,7 @@ const App = () => {
             justifyContent: "space-between",
           }}
         >
-          <div style={{ flex: 1, paddingRight: "20px" }}>
-           <h2
+        <h1
   style={{
     marginBottom: "20px",
     color: "#7ebeab",
@@ -84,7 +75,10 @@ const App = () => {
   }}
 >
   スキル
-</h2>
+</h1>
+          
+          <div style={{ flex: 1, paddingRight: "20px" }}>
+      
             <table
               style={{
                 width: "100%",
