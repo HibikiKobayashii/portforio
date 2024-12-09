@@ -25,6 +25,21 @@ const App = () => {
           * {
             box-sizing: border-box;
           }
+
+          /* レスポンシブデザイン */
+          @media (max-width: 768px) {
+            #skills {
+              flex-direction: column; /* 縦に配置 */
+              align-items: center;
+            }
+            #skills .table-container {
+              width: 90%; /* 幅を縮小 */
+              margin-bottom: 20px;
+            }
+            #skills .image-container {
+              width: 90%; /* 幅を縮小 */
+            }
+          }
         `}
       </style>
 
@@ -40,12 +55,12 @@ const App = () => {
 
         {/* hibiki.jpg画像を表示 */}
         <div style={{ marginTop: "20px" }}>
-          <Image
+          <img
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt="小林響"
-            width={300}
-            height={300}
             style={{
+              width: "300px",
+              height: "auto",
               borderRadius: "10px",
               border: "1px solid #a0d8ef",
             }}
@@ -63,11 +78,11 @@ const App = () => {
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             display: "flex",
             justifyContent: "space-between", // 左右に分割
-            alignItems: "flex-start", // 左上寄せ
+            alignItems: "flex-start",
           }}
         >
           {/* 左側: スキル表 */}
-          <div style={{ width: "65%" }}> {/* 横幅を広く調整 */}
+          <div className="table-container" style={{ width: "65%" }}>
             <h1
               style={{
                 marginBottom: "20px",
@@ -216,16 +231,17 @@ const App = () => {
 
           {/* 右側: ReactとNext.js画像 */}
           <div
+            className="image-container"
             style={{
               display: "flex",
               flexDirection: "column",
               gap: "20px",
               alignItems: "center",
-              width: "30%", // 画像エリアの横幅
+              width: "30%",
             }}
           >
             <Image
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/react.jpg"
+              src="/gazo/react.jpg"
               alt="React"
               width={200}
               height={200}
@@ -235,7 +251,7 @@ const App = () => {
               }}
             />
             <Image
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/nextjs.jpg"
+              src="/gazo/nextjs.jpg"
               alt="Next.js"
               width={200}
               height={200}
