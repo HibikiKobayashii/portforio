@@ -292,14 +292,7 @@ const App = () => {
               justifyContent: "center",
             }}
           >
-             <div
-            className="left"
-            style={{
-              width: "50%",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
+          
             <img
               src="URL_OF_IMAGE_HERE"
               alt="新しい画像"
