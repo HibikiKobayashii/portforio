@@ -41,7 +41,7 @@ const App = () => {
         {/* 画像の表示 */}
         <div style={{ marginTop: "20px" }}>
           <img
-            src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
+            src="" //"https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt="小林響"
             style={{
               width: "300px",
