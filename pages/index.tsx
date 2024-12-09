@@ -66,7 +66,15 @@ const App = () => {
           }}
         >
           <div style={{ flex: 1, paddingRight: "20px" }}>
-            <h2 style={{ marginBottom: "20px", color: "#7ebeab" }}>スキル</h2>
+           <h2
+  style={{
+    marginBottom: "20px",
+    color: "#7ebeab",
+    textAlign: "center", // 水平方向に中央揃え
+  }}
+>
+  スキル
+</h2>
             <table
               style={{
                 width: "100%",
