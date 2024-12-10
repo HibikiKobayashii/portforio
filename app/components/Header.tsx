@@ -21,7 +21,7 @@ const Header = () => {
     >
       {/* My Portfolioをクリックでホームに飛ぶように変更 */}
       <h1 style={{ color: "#a0d8ef", fontSize: "24px" }}>
-        <Link href="/" style={{ textDecoration: "none", color: "#a0d8ef" }}>
+        <Link href="https://hibikikobayashii.github.io/" style={{ textDecoration: "none", color: "#a0d8ef" }}>
           My Portfolio
         </Link>
       </h1>
