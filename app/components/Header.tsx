@@ -1,4 +1,3 @@
-import HomeIcon from '@mui/icons-material/Home'; // ホームアイコンをインポート
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'; // お問い合わせアイコンをインポート
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -20,7 +19,12 @@ const Header = () => {
         zIndex: 1000,
       }}
     >
-      <h1 style={{ color: "#a0d8ef", fontSize: "24px" }}>My Portfolio</h1>
+      {/* My Portfolioをクリックでホームに飛ぶように変更 */}
+      <h1 style={{ color: "#a0d8ef", fontSize: "24px" }}>
+        <Link href="/" style={{ textDecoration: "none", color: "#a0d8ef" }}>
+          My Portfolio
+        </Link>
+      </h1>
       <nav>
         <ul
           style={{
@@ -31,20 +35,10 @@ const Header = () => {
             gap: "20px",
           }}
         >
-          {/* ホームリンク */}
+          {/* プロフィールリンク */}
           <li>
             <Link 
-              href="https://hibikikobayashii.github.io/" // ホームリンク
-              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
-            >
-              <HomeIcon style={{ marginRight: "8px" }} />
-            </Link>
-          </li>
-
-　　　　　　 {/* プロフィールリンク */}
-          <li>
-            <Link 
-              href="https://hibikikobayashii.github.io/profile" // ホームリンク
+              href="https://hibikikobayashii.github.io/profile" // プロフィールリンク
               style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
             >
               <AccountCircleIcon style={{ marginRight: "8px" }} />
@@ -81,7 +75,6 @@ const Header = () => {
             </Link>
           </li>
        
-          
         </ul>
       </nav>
     </header>
