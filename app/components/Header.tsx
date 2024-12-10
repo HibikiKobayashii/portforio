@@ -1,5 +1,6 @@
 import HomeIcon from '@mui/icons-material/Home'; // ホームアイコンをインポート
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'; // お問い合わせアイコンをインポート
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Link from "next/link"; // Next.jsのリンクコンポーネントをインポート
 
 const Header = () => {
@@ -38,6 +39,16 @@ const Header = () => {
             </Link>
           </li>
 
+ {/* リンク */}
+          <li>
+            <Link 
+              href="https://hibikikobayashii.github.io/profile" // ホームリンク
+              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
+            >
+              <AccountCircleIcon style={{ marginRight: "8px" }} />
+            </Link>
+          </li>
+          
           {/* お問い合わせリンク */}
           <li>
             <Link 
