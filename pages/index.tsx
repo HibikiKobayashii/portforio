@@ -296,8 +296,8 @@ const App = () => {
   >
     {/* 1枚目の画像 */}
     <img
-      src="URL_OF_IMAGE_1_HERE"
-      alt="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/s.jpg"
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
+      alt=""
       style={{
         width: "90%",
         height: "auto",
@@ -306,8 +306,8 @@ const App = () => {
     />
     {/* 2枚目の画像 */}
     <img
-      src="URL_OF_IMAGE_2_HERE"
-      alt="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
+      alt=""
       style={{
         width: "90%",
         height: "auto",
@@ -354,7 +354,7 @@ const App = () => {
           >
             <img
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
-              alt="新しい画像"
+              alt=""
               style={{
                 width: "90%",
                 height: "auto",
