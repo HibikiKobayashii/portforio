@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header
       style={{
-        position: "fixed",
+        position: "fixed",　
         top: 0,
         width: "100%",
         backgroundColor: "#08081a",
