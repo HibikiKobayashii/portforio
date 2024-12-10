@@ -1,4 +1,5 @@
-import HomeIcon from '@mui/icons-material/Home'; // アイコンをインポート
+import HomeIcon from '@mui/icons-material/Home'; // ホームアイコンをインポート
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'; // お問い合わせアイコンをインポート
 import Link from "next/link"; // Next.jsのリンクコンポーネントをインポート
 
 const Header = () => {
@@ -27,20 +28,23 @@ const Header = () => {
             gap: "20px",
           }}
         >
+          {/* ホームリンク */}
           <li>
             <Link 
-              href="https://hibikikobayashii.github.io/" // 新しいリンクを指定
+              href="https://hibikikobayashii.github.io/" // ホームリンク
               style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
             >
-              <HomeIcon style={{ marginRight: "8px" }} /> {/* アイコンのみ表示 */}
+              <HomeIcon style={{ marginRight: "8px" }} />
             </Link>
           </li>
+
+          {/* お問い合わせリンク */}
           <li>
-            <Link
-              href="/contact" // contact.tsxへのリンク
-              style={{ color: "#a0d8ef", textDecoration: "none" }}
+            <Link 
+              href="https://hibikikobayashii.github.io/contact" // お問い合わせリンク
+              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
             >
-              お問い合わせ
+              <ConnectWithoutContactIcon style={{ marginRight: "8px" }} />
             </Link>
           </li>
         </ul>
