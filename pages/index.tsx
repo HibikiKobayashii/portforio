@@ -15,7 +15,7 @@ const App = () => {
         backgroundColor: "#08081a",
         color: "#a0d8ef",
       }}
-    >
+    >　
       <style>
         {`
           html, body {
