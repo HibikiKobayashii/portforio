@@ -373,8 +373,8 @@ const App = () => {
               lineHeight: "1.6",
             }}
           >
-            <h2 style={{ color: "#7ebeab" }}>セクションタイトル</h2>
-            <p>ここに文章を記載できます。自由に内容を追加してください。</p>
+            <h2 style={{ color: "#7ebeab" }}>SNS活動</h2>
+            <p>Youtube、Twitchでの配信活動を行っています。現在は収益化等は出来ていませんが、将来奇跡が起きることを信じて努力しています。</p>
           </div>
         </section>
         
