@@ -28,24 +28,28 @@ const Profile = () => {
             align-items: center;
             justify-content: center;
             margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
           }
           .profile-header {
             font-size: 48px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             color: #a0d8ef;
+            text-align: center;
           }
           .job-title {
             font-size: 24px;
             color: #a0d8ef;
             margin-bottom: 10px;
+            font-weight: bold;
           }
           .job-description {
             font-size: 16px;
             color: #a0d8ef;
             line-height: 1.8;
             margin-bottom: 30px;
-            max-width: 800px;
             text-align: left;
           }
           .experience-list {
@@ -55,10 +59,11 @@ const Profile = () => {
             width: 100%;
           }
           .experience-item {
-            padding: 10px;
-            margin-bottom: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
             background-color: #121212;
             border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           }
           .experience-item h3 {
             font-size: 20px;
@@ -68,6 +73,10 @@ const Profile = () => {
           .experience-item p {
             font-size: 16px;
             margin: 5px 0 0;
+          }
+          .year {
+            font-weight: bold;
+            color: #a0d8ef;
           }
         `}
       </style>
@@ -86,17 +95,17 @@ const Profile = () => {
           {/* 経歴リスト */}
           <ul className="experience-list">
             <li className="experience-item">
-              <h3>2035 - 現在: エディター</h3>
+              <h3><span className="year">2035 - 現在</span>: エディター</h3>
               <p>テキストの例です。ここをクリックして「テキストを編集」を選択するか、ここをダブルクリックしてテキストを編集してください。文字の色やフォントを変更することもできます。</p>
             </li>
 
             <li className="experience-item">
-              <h3>2035 - 2035: 株式会社 Large, ライター</h3>
+              <h3><span className="year">2035 - 2035</span>: 株式会社 Large, ライター</h3>
               <p>テキストの例です。ここをクリックして「テキストを編集」を選択するか、ここをダブルクリックしてテキストを編集してください。文字の色やフォントを変更することもできます。</p>
             </li>
 
             <li className="experience-item">
-              <h3>2035 - 2035: インターン</h3>
+              <h3><span className="year">2035 - 2035</span>: インターン</h3>
               <p>テキストの例です。ここをクリックして「テキストを編集」を選択するか、ここをダブルクリックしてテキストを編集してください。文字の色やフォントを変更することもできます。</p>
             </li>
           </ul>
