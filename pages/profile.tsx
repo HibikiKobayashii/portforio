@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../app/components/Header";
 
-const Contact = () => {
+const profile = () => {
   return (
     <div
       style={{
@@ -34,7 +34,7 @@ const Contact = () => {
         }}
       >
         <h1>Contact Page</h1>
-        <p>This is the contact page content.</p>
+        <p>This is the profile page content.</p>
       </main>
     </div>
   );
