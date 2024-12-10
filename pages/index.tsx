@@ -326,8 +326,8 @@ const App = () => {
       lineHeight: "1.6",
     }}
   >
-    <h2 style={{ color: "#7ebeab" }}>セクションタイトル</h2>
-    <p>ここに文章を記載できます。自由に内容を追加してください。</p>
+    <h2 style={{ color: "#7ebeab" }}>React,Next.jsでのWebアプリケーション開発</h2>
+    <p>臨時実務実習（インターン）で、Iotデバイスからデータを取り込み、Webで可視化をしました。1ヶ月という短い期間の中で,Next.jsの開発技術を習得しました。</p>
   </div>
 </section>
 
