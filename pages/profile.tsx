@@ -33,7 +33,7 @@ const profile = () => {
           minHeight: "100vh",
         }}
       >
-        <h1>Contact Page</h1>
+        <h1>Profile.</h1>
         <p>This is the profile page content.</p>
       </main>
     </div>
