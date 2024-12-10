@@ -296,7 +296,7 @@ const App = () => {
   >
     {/* 1枚目の画像 */}
     <img
-      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/s.jpg"
       alt=""
       style={{
         width: "90%",
