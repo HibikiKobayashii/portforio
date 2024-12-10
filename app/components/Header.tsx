@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header
       style={{
-        position: "fixed",　
+        position: "fixed",
         top: 0,
         width: "100%",
         backgroundColor: "#08081a",
@@ -28,9 +28,11 @@ const Header = () => {
           }}
         >
           <li>
-            <Link href="/" style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}>
-              <HomeIcon style={{ marginRight: "8px" }} /> {/* アイコンと文字を並べて表示 */}
-              ホーム
+            <Link 
+              href="https://hibikikobayashii.github.io/" // 新しいリンクを指定
+              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
+            >
+              <HomeIcon style={{ marginRight: "8px" }} /> {/* アイコンのみ表示 */}
             </Link>
           </li>
           <li>
