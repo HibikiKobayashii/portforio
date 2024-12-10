@@ -1,5 +1,7 @@
 import HomeIcon from '@mui/icons-material/Home'; // ホームアイコンをインポート
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'; // お問い合わせアイコンをインポート
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Link from "next/link"; // Next.jsのリンクコンポーネントをインポート
 
@@ -39,7 +41,7 @@ const Header = () => {
             </Link>
           </li>
 
- {/* リンク */}
+　　　　　　 {/* プロフィールリンク */}
           <li>
             <Link 
               href="https://hibikikobayashii.github.io/profile" // ホームリンク
@@ -58,6 +60,28 @@ const Header = () => {
               <ConnectWithoutContactIcon style={{ marginRight: "8px" }} />
             </Link>
           </li>
+          
+          {/* インスタグラムリンク */}
+          <li>
+            <Link 
+              href="https://www.instagram.com/mrq_1p?igsh=enljbnM2d25wdnZ6" 
+              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
+            >
+              <InstagramIcon style={{ marginRight: "8px" }} />
+            </Link>
+          </li>
+
+          {/* YouTubeリンク */}
+          <li>
+            <Link 
+              href="https://youtube.com/@futuregame0920?si=X0NHIuS1oiX6TMSl" 
+              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
+            >
+              <YouTubeIcon style={{ marginRight: "8px" }} />
+            </Link>
+          </li>
+       
+          
         </ul>
       </nav>
     </header>
