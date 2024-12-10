@@ -1,3 +1,4 @@
+import HomeIcon from '@mui/icons-material/Home'; // アイコンをインポート
 import Link from "next/link"; // Next.jsのリンクコンポーネントをインポート
 
 const Header = () => {
@@ -27,7 +28,8 @@ const Header = () => {
           }}
         >
           <li>
-            <Link href="/" style={{ color: "#a0d8ef", textDecoration: "none" }}>
+            <Link href="/" style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}>
+              <HomeIcon style={{ marginRight: "8px" }} /> {/* アイコンと文字を並べて表示 */}
               ホーム
             </Link>
           </li>
