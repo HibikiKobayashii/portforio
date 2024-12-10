@@ -1,6 +1,6 @@
 import React from "react";
 
-const Biography = () => {
+const profile = () => {
   return (
     <div>
       <h1>Biography Page</h1>
@@ -9,4 +9,4 @@ const Biography = () => {
   );
 };
 
-export default Biography;  // Biography コンポーネントをエクスポート
+export default profile;  // profile コンポーネントをエクスポート
