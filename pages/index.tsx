@@ -299,7 +299,7 @@ const App = () => {
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/s.jpg"
               alt=""
               style={{
-                width: "100%",
+                width: "50%",
                 height: "auto",
                 borderRadius: "10px",
               }}
@@ -309,7 +309,7 @@ const App = () => {
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/v.jpg"
               alt=""
               style={{
-                width: "100%",
+                width: "50%",
                 height: "auto",
                 borderRadius: "10px",
               }}
@@ -331,7 +331,7 @@ const App = () => {
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/m.jpg"
               alt=""
               style={{
-                width: "100%",
+                width: "50%",
                 height: "auto",
                 borderRadius: "10px",
               }}
@@ -341,7 +341,7 @@ const App = () => {
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
               alt=""
               style={{
-                width: "100%",
+                width: "50%",
                 height: "auto",
                 borderRadius: "10px",
               }}
