@@ -304,6 +304,26 @@ const App = () => {
         borderRadius: "10px",
       }}
     />
+     {/* 1枚目の画像 */}
+    <img
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/v.jpg"
+      alt=""
+      style={{
+        width: "50%",
+        height: "auto",
+        borderRadius: "10px",
+      }}
+    />
+      {/* 1枚目の画像 */}
+    <img
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/m.jpg"
+      alt=""
+      style={{
+        width: "50%",
+        height: "auto",
+        borderRadius: "10px",
+      }}
+    />
     {/* 2枚目の画像 */}
     <img
       src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
