@@ -332,3 +332,73 @@ const App = () => {
               alt=""
               style={{
                 width: "100%",
+                height: "auto",
+                borderRadius: "10px",
+              }}
+            />
+            {/* 画像4 */}
+            <img
+              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
+              alt=""
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: "10px",
+              }}
+            />
+          </div>
+        </section>
+
+        {/* もう一つの新しいセクション */}
+        <section
+          id="new-section"
+          style={{
+            marginTop: "50px",
+            display: "grid",
+            gridTemplateColumns: "repeat(2, 1fr)", // 横2列
+            gap: "20px",
+            alignItems: "center",
+            backgroundColor: "#1a1a2e",
+            padding: "20px",
+            borderRadius: "10px",
+          }}
+        >
+          {/* 左側: 画像 */}
+          <div
+            className="left"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
+              alt=""
+              style={{
+                width: "90%",
+                height: "auto",
+                borderRadius: "10px",
+              }}
+            />
+          </div>
+
+          {/* 右側: テキスト */}
+          <div
+            className="right"
+            style={{
+              color: "#a0d8ef",
+              textAlign: "left",
+              lineHeight: "1.6",
+            }}
+          >
+            <h2 style={{ color: "#7ebeab" }}>SNS活動</h2>
+            <p>Youtube、Twitchでの配信活動を行っています。現在は収益化等は出来ていませんが、将来奇跡が起きることを信じて努力しています。</p>
+          </div>
+        </section>
+        
+      </main>
+    </div>
+  );
+};
+
+export default App;
