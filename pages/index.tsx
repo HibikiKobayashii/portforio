@@ -15,7 +15,7 @@ const App = () => {
         backgroundColor: "#08081a",
         color: "#a0d8ef",
       }}
-    >
+    >　
       <style>
         {`
           html, body {
@@ -39,9 +39,12 @@ const App = () => {
             #skills .image-container {
               width: 90%; /* 幅を縮小 */
             }
-            #new-section .left {
-              grid-template-columns: repeat(2, 1fr); /* 横2つ */
-              gap: 15px;
+            #new-section {
+              flex-direction: column; /* 縦に配置 */
+            }
+            #new-section .left,
+            #new-section .right {
+              width: 100%;
             }
           }
         `}
@@ -57,6 +60,7 @@ const App = () => {
       >
         <TextContent />
 
+        {/* hibiki.jpg画像を表示 */}
         <div style={{ marginTop: "20px" }}>
           <img
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
@@ -70,6 +74,7 @@ const App = () => {
           />
         </div>
 
+        {/* スキルセクション */}
         <section
           id="skills"
           style={{
@@ -79,11 +84,12 @@ const App = () => {
             borderRadius: "10px",
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
+            justifyContent: "space-between", // 左右に分割
+            alignItems: "flex-start",
           }}
         >
-          <div className="table-container" style={{ width: "90%", maxWidth: "600px" }}>
+          {/* 左側: スキル表 */}
+          <div className="table-container" style={{ width: "65%" }}>
             <h1
               style={{
                 marginBottom: "20px",
@@ -165,28 +171,87 @@ const App = () => {
                     初心者
                   </td>
                 </tr>
+                <tr>
+                  <td
+                    style={{
+                      padding: "15px",
+                      border: "1px solid #7ebeab",
+                      color: "#7ebeab",
+                    }}
+                  >
+                    JavaScript
+                  </td>
+                  <td
+                    style={{
+                      padding: "15px",
+                      border: "1px solid #7ebeab",
+                      color: "#7ebeab",
+                    }}
+                  >
+                    中級者
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      padding: "15px",
+                      border: "1px solid #7ebeab",
+                      color: "#7ebeab",
+                    }}
+                  >
+                    React(JS)
+                  </td>
+                  <td
+                    style={{
+                      padding: "15px",
+                      border: "1px solid #7ebeab",
+                      color: "#7ebeab",
+                    }}
+                  >
+                    使い始めた
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style={{
+                      padding: "15px",
+                      border: "1px solid #7ebeab",
+                      color: "#7ebeab",
+                    }}
+                  >
+                    Next.js(JS)
+                  </td>
+                  <td
+                    style={{
+                      padding: "15px",
+                      border: "1px solid #7ebeab",
+                      color: "#7ebeab",
+                    }}
+                  >
+                    使い始めた
+                  </td>
+                </tr>
               </tbody>
             </table>
             <SkillDescription />
           </div>
 
+          {/* 右側: ReactとNext.js画像 */}
           <div
             className="image-container"
             style={{
               display: "flex",
-              justifyContent: "center",
-              flexWrap: "wrap",
+              flexDirection: "column",
               gap: "20px",
-              marginTop: "20px",
-              width: "100%",
-              maxWidth: "600px",
+              alignItems: "center",
+              width: "30%",
             }}
           >
             <Image
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/react.jpg"
               alt="React"
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               style={{
                 borderRadius: "10px",
                 border: "1px solid #7ebeab",
@@ -195,8 +260,8 @@ const App = () => {
             <Image
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/nextjs.jpg"
               alt="Next.js"
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               style={{
                 borderRadius: "10px",
                 border: "1px solid #7ebeab",
@@ -205,66 +270,134 @@ const App = () => {
           </div>
         </section>
 
-        <section
+       {/* 新しいセクション */}
+<section
+  id="new-section"
+  style={{
+    marginTop: "50px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "#1a1a2e",  
+    padding: "20px",
+    borderRadius: "10px",
+  }}
+>
+  {/* 左側: 画像 */}
+  <div
+    className="left"
+    style={{
+      width: "50%",
+      display: "flex",
+      flexDirection: "column", // 縦に配置
+      alignItems: "center",
+      gap: "20px", // 画像の間にスペース
+    }}
+  >
+    {/* 1枚目の画像 */}
+    <img
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/s.jpg"
+      alt=""
+      style={{
+        width: "50%",
+        height: "auto",
+        borderRadius: "10px",
+      }}
+    />
+     {/* 1枚目の画像 */}
+    <img
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/v.jpg"
+      alt=""
+      style={{
+        width: "50%",
+        height: "auto",
+        borderRadius: "10px",
+      }}
+    />
+      {/* 1枚目の画像 */}
+    <img
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/m.jpg"
+      alt=""
+      style={{
+        width: "50%",
+        height: "auto",
+        borderRadius: "10px",
+      }}
+    />
+    {/* 2枚目の画像 */}
+    <img
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
+      alt=""
+      style={{
+        width: "50%",
+        height: "auto",
+        borderRadius: "10px",
+      }}
+    />
+  </div>
+
+  {/* 右側: テキスト */}
+  <div
+    className="right"
+    style={{
+      width: "45%",
+      color: "#a0d8ef",
+      textAlign: "left",
+      lineHeight: "1.6",
+    }}
+  >
+    <h2 style={{ color: "#7ebeab" }}>React,Next.jsでのWebアプリケーション開発</h2>
+    <p>臨時実務実習（インターン）で、Iotデバイスからデータを取り込み、Webで可視化をしました。1ヶ月という短い期間の中で,Next.jsの開発技術を習得しました。</p>
+  </div>
+</section>
+
+ <section
           id="new-section"
           style={{
             marginTop: "50px",
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "space-between",
             alignItems: "center",
             backgroundColor: "#1a1a2e",
             padding: "20px",
             borderRadius: "10px",
           }}
         >
+          {/* 左側: 画像 */}
           <div
             className="left"
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)", // 横2つ縦2つに配置
-              gap: "20px",
-              justifyItems: "center",
-              width: "80%", // セクション幅を制限
+              width: "50%",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
-            <img
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/s.jpg"
-              alt=""
-              style={{
-                width: "100%",
-                height: "auto",
-                borderRadius: "10px",
-              }}
-            />
-            <img
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/v.jpg"
-              alt=""
-              style={{
-                width: "100%",
-                height: "auto",
-                borderRadius: "10px",
-              }}
-            />
-            <img
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/m.jpg"
-              alt=""
-              style={{
-                width: "100%",
-                height: "auto",
-                borderRadius: "10px",
-              }}
-            />
             <img
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
               alt=""
               style={{
-                width: "100%",
+                width: "90%",
                 height: "auto",
                 borderRadius: "10px",
               }}
             />
           </div>
+
+          {/* 右側: テキスト */}
+          <div
+            className="right"
+            style={{
+              width: "45%",
+              color: "#a0d8ef",
+              textAlign: "left",
+              lineHeight: "1.6",
+            }}
+          >
+            <h2 style={{ color: "#7ebeab" }}>SNS活動</h2>
+            <p>Youtube、Twitchでの配信活動を行っています。現在は収益化等は出来ていませんが、将来奇跡が起きることを信じて努力しています。</p>
+          </div>
         </section>
+        
       </main>
     </div>
   );
