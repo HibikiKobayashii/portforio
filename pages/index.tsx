@@ -278,7 +278,7 @@ const App = () => {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#03090d",  
+    backgroundColor: "#1a1a2e",  
     padding: "20px",
     borderRadius: "10px",
   }}
