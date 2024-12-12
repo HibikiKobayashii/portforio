@@ -60,20 +60,6 @@ const App = () => {
       >
         <TextContent />
 
-        {/* hibiki.jpg画像を表示 */}
-        <div style={{ marginTop: "20px" }}>
-          <img
-            src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
-            alt="小林響"
-            style={{
-              width: "300px",
-              height: "auto",
-              borderRadius: "10px",
-              border: "1px solid #a0d8ef",
-            }}
-          />
-        </div>
-
         {/* スキルセクション */}
         <section
           id="skills"
@@ -88,163 +74,15 @@ const App = () => {
             alignItems: "flex-start",
           }}
         >
-          {/* 左側: スキル表 */}
-          <div className="table-container" style={{ width: "65%" }}>
-            <h1
-              style={{
-                marginBottom: "20px",
-                color: "#7ebeab",
-                textAlign: "center",
-              }}
-            >
-              スキル
-            </h1>
-            <table
-              style={{
-                width: "100%",
-                borderCollapse: "collapse",
-                marginBottom: "20px",
-              }}
-            >
-              <thead>
-                <tr>
-                  <th
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      backgroundColor: "#000000",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    技術
-                  </th>
-                  <th
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      backgroundColor: "#000000",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    レベル
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    HTML
-                  </td>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    初心者
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    CSS
-                  </td>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    初心者
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    JavaScript
-                  </td>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    中級者
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    React(JS)
-                  </td>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    使い始めた
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    Next.js(JS)
-                  </td>
-                  <td
-                    style={{
-                      padding: "15px",
-                      border: "1px solid #7ebeab",
-                      color: "#7ebeab",
-                    }}
-                  >
-                    使い始めた
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <SkillDescription />
-          </div>
-
-          {/* 右側: ReactとNext.js画像 */}
+          {/* 左側: 画像 */}
           <div
             className="image-container"
             style={{
               display: "flex",
               flexDirection: "column",
               gap: "20px",
-              alignItems: "center",
-              width: "30%",
+              alignItems: "flex-start",
+              width: "30%", // 左側に画像を集める
             }}
           >
             <Image
@@ -267,115 +105,20 @@ const App = () => {
                 border: "1px solid #7ebeab",
               }}
             />
-          </div>
-        </section>
-
-        {/* 新しいセクション */}
-        <section
-          id="new-section"
-          style={{
-            marginTop: "50px",
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)", // 横2列
-            gap: "20px",
-            alignItems: "center",
-            backgroundColor: "#1a1a2e",
-            padding: "20px",
-            borderRadius: "10px",
-          }}
-        >
-          {/* 左側: 画像 */}
-          <div
-            className="left"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              alignItems: "center",
-            }}
-          >
-            {/* 画像1 */}
             <img
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/s.jpg"
               alt=""
               style={{
-                width: "50%",
+                width: "100%",
                 height: "auto",
                 borderRadius: "10px",
               }}
             />
-            {/* 画像2 */}
             <img
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/v.jpg"
               alt=""
               style={{
-                width: "50%",
-                height: "auto",
-                borderRadius: "10px",
-              }}
-            />
-          </div>
-
-          {/* 右側: 画像 */}
-          <div
-            className="right"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              alignItems: "center",
-            }}
-          >
-            {/* 画像3 */}
-            <img
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/m.jpg"
-              alt=""
-              style={{
-                width: "50%",
-                height: "auto",
-                borderRadius: "10px",
-              }}
-            />
-            {/* 画像4 */}
-            <img
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
-              alt=""
-              style={{
-                width: "50%",
-                height: "auto",
-                borderRadius: "10px",
-              }}
-            />
-          </div>
-        </section>
-
-        {/* もう一つの新しいセクション */}
-        <section
-          id="new-section"
-          style={{
-            marginTop: "50px",
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)", // 横2列
-            gap: "20px",
-            alignItems: "center",
-            backgroundColor: "#1a1a2e",
-            padding: "20px",
-            borderRadius: "10px",
-          }}
-        >
-          {/* 左側: 画像 */}
-          <div
-            className="left"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <img
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
-              alt=""
-              style={{
-                width: "90%",
+                width: "100%",
                 height: "auto",
                 borderRadius: "10px",
               }}
@@ -384,18 +127,22 @@ const App = () => {
 
           {/* 右側: テキスト */}
           <div
-            className="right"
+            className="text-container"
             style={{
               color: "#a0d8ef",
               textAlign: "left",
               lineHeight: "1.6",
+              width: "65%", // 右側にテキストを広げる
+              paddingLeft: "20px",
             }}
           >
             <h2 style={{ color: "#7ebeab" }}>SNS活動</h2>
-            <p>Youtube、Twitchでの配信活動を行っています。現在は収益化等は出来ていませんが、将来奇跡が起きることを信じて努力しています。</p>
+            <p>
+              Youtube、Twitchでの配信活動を行っています。現在は収益化等は出来ていませんが、将来奇跡が起きることを信じて努力しています。
+            </p>
+            <SkillDescription />
           </div>
         </section>
-        
       </main>
     </div>
   );
