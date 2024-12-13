@@ -21,10 +21,11 @@ export default async function handler(req, res) {
         return res.status(200).json({ success: true });
       } else {
         const errorData = await response.json();
-        return res.status(response.status).json({ error: errorData });
+        return res.status(response.status).json({ error: errorData.message || "送信に失敗しました。" });
       }
     } catch (error) {
-      return res.status(500).json({ error: "内部エラーが発生しました。" });
+      // エラーハンドリングの部分でエラーを使います
+      return res.status(500).json({ error: error.message || "内部エラーが発生しました。" });
     }
   } else {
     res.setHeader("Allow", ["POST"]);
