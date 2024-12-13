@@ -1,7 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../app/components/Header";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus(null);
+
+    try {
+      const response = await fetch("/api/submitForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div
       style={{
@@ -13,85 +49,6 @@ const Contact = () => {
         color: "#a0d8ef",
       }}
     >
-      <style>
-        {`
-          html, body {
-            margin: 0;
-            padding: 0;
-          }
-          * {
-            box-sizing: border-box;
-          }
-          .profile-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-top: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          .profile-header {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 30px;
-            color: #a0d8ef;
-            text-align: center;
-          }
-          .form-container {
-            margin-top: 50px;
-            background-color: #1a1a2e;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          .form-group {
-            margin-bottom: 20px;
-          }
-          .form-label {
-            display: block;
-            font-size: 16px;
-            color: #a0d8ef;
-            margin-bottom: 8px;
-          }
-          .form-input,
-          .form-textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #7ebeab;
-            border-radius: 5px;
-            background-color: #08081a;
-            color: #a0d8ef;
-            font-size: 14px;
-          }
-          .form-input:focus,
-          .form-textarea:focus {
-            outline: none;
-            border-color: #a0d8ef;
-          }
-          .form-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #7ebeab;
-            color: #08081a;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-          }
-          .form-button:hover {
-            background-color: #a0d8ef;
-            color: #08081a;
-          }
-        `}
-      </style>
-
       <Header />
       <main
         style={{
@@ -104,7 +61,7 @@ const Contact = () => {
           <h1 className="profile-header">Contact.</h1>
         </div>
         <div className="form-container">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label className="form-label" htmlFor="name">
                 お名前 *
@@ -114,6 +71,8 @@ const Contact = () => {
                 type="text"
                 id="name"
                 placeholder="お名前を入力してください"
+                value={formData.name}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -126,6 +85,8 @@ const Contact = () => {
                 type="email"
                 id="email"
                 placeholder="メールアドレスを入力してください"
+                value={formData.email}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -138,12 +99,16 @@ const Contact = () => {
                 id="message"
                 rows={5}
                 placeholder="内容をご入力ください"
+                value={formData.message}
+                onChange={handleChange}
                 required
               ></textarea>
             </div>
-            <button className="form-button" type="submit">
-              送信
+            <button className="form-button" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "送信中..." : "送信"}
             </button>
+            {status === "success" && <p style={{ color: "green" }}>送信が成功しました！</p>}
+            {status === "error" && <p style={{ color: "red" }}>送信に失敗しました。</p>}
           </form>
         </div>
       </main>
