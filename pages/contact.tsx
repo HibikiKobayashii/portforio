@@ -22,6 +22,23 @@ const Contact = () => {
           * {
             box-sizing: border-box;
           }
+          .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .profile-header {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #a0d8ef;
+            text-align: center;
+          }
         `}
       </style>
 
@@ -33,8 +50,9 @@ const Contact = () => {
           minHeight: "100vh",
         }}
       >
-        <h1>Contact Page</h1>
-        <p>This is the contact page content.</p>
+        <div className="profile-container">
+          <h1 className="profile-header">Contact.</h1>
+        </div>
       </main>
     </div>
   );
