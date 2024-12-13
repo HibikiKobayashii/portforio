@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../app/components/Header";
+import Image from 'next/image';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
