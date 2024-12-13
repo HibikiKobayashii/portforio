@@ -102,14 +102,14 @@ const Profile = () => {
               <h3>
                 <span className="year">2023/04 - 現在</span>私立開志専門職大学　在学
               </h3>
-              <p></p>
+              <p>情報学部所属。XR、IoTの分野を学んでいる。</p>
             </li>
 
             <li className="experience-item">
               <h3>
                 <span className="year">2020/04 - 2023/03</span>私立新潟青陵高等学校　在学
               </h3>
-              <p></p>
+              <p>普通科進学コース所属。</p>
             </li>
 
             <li className="experience-item">
