@@ -4,17 +4,19 @@ import Header from "../app/components/Header";
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState<string | null>(null); // Success or error status
+  const [error, setError] = useState<string | null>(null); // Error message for handling failed submission
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus(null);
+    setError(null);
 
     try {
       const response = await fetch("/api/submitForm", {
@@ -29,9 +31,12 @@ const Contact = () => {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
+        const errorData = await response.json();
+        setError(errorData?.error || "送信に失敗しました");
         setStatus("error");
       }
     } catch (error) {
+      setError("ネットワークエラーが発生しました。再試行してください。");
       setStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -108,7 +113,11 @@ const Contact = () => {
               {isSubmitting ? "送信中..." : "送信"}
             </button>
             {status === "success" && <p style={{ color: "green" }}>送信が成功しました！</p>}
-            {status === "error" && <p style={{ color: "red" }}>送信に失敗しました。</p>}
+            {status === "error" && (
+              <p style={{ color: "red" }}>
+                {error || "送信に失敗しました。もう一度お試しください。"}
+              </p>
+            )}
           </form>
         </div>
       </main>
