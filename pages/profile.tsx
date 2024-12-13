@@ -68,7 +68,7 @@ const Profile = () => {
           .experience-item h3 {
             font-size: 20px;
             margin: 0;
-            color: #a0d8ef; /* テキストが読めるように色を変更 */
+            color: #7ebeab; /* テキスト色を変更 */
           }
           .experience-item p {
             font-size: 16px;
