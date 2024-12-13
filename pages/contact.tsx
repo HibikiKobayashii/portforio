@@ -5,10 +5,12 @@ const Contact = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const formData = {
-      name: (event.target as HTMLFormElement).name.value,
-      email: (event.target as HTMLFormElement).email.value,
-      message: (event.target as HTMLFormElement).message.value,
+    const formData = new FormData(event.target as HTMLFormElement);
+
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string,
     };
 
     try {
@@ -17,7 +19,7 @@ const Contact = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
 
       if (response.ok) {
