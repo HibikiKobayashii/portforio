@@ -9,20 +9,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-      // SHEETDB_API_URL 環境変数を使用
       const sheetDbUrl = process.env.SHEETDB_API_URL;
 
       if (!sheetDbUrl) {
         throw new Error("SHEETDB_API_URL が設定されていません。");
       }
 
+      // シートの列名に合わせてデータキーを指定
       const response = await fetch(sheetDbUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          data: { name, email, message },
+          data: {
+            お名前: name, // 日本語の列名
+            メールアドレス: email, // 日本語の列名
+            内容: message, // 日本語の列名
+          },
         }),
       });
 
@@ -30,7 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.status(200).json({ message: "データが正常に送信されました。" });
       } else {
         const error = await response.json();
-        res.status(500).json({ error: `SheetDB API エラー: ${error}` });
+        res.status(500).json({ error: `SheetDB API エラー: ${JSON.stringify(error)}` });
       }
     } catch (error) {
       console.error(error);
