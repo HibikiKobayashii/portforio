@@ -94,29 +94,38 @@ const Profile = () => {
         }}
       >
         <div className="profile-container">
-          <h1 className="profile-header">Profile.</h1>
+          <h1 className="profile-header">History.</h1>
           
           {/* 経歴リスト */}
           <ul className="experience-list">
             <li className="experience-item">
               <h3>
-                <span className="year">2035 - 現在</span>エディター
+                <span className="year">2023/04 - 現在</span>私立開志専門職大学　在学
               </h3>
-              <p>テキストの例です。ここをクリックして「テキストを編集」を選択するか、ここをダブルクリックしてテキストを編集してください。文字の色やフォントを変更することもできます。</p>
+              <p></p>
             </li>
 
             <li className="experience-item">
               <h3>
-                <span className="year">2035 - 2035</span>株式会社 Large, ライター
+                <span className="year">2020/04 - 2023/03</span>私立新潟青陵高等学校　在学
               </h3>
-              <p>テキストの例です。ここをクリックして「テキストを編集」を選択するか、ここをダブルクリックしてテキストを編集してください。文字の色やフォントを変更することもできます。</p>
+              <p></p>
             </li>
 
             <li className="experience-item">
               <h3>
-                <span className="year">2035 - 2035</span>インターン
+                <span className="year">2017/04 - 2020/03</span>新潟市立白根北中学校　在学
               </h3>
-              <p>テキストの例です。ここをクリックして「テキストを編集」を選択するか、ここをダブルクリックしてテキストを編集してください。文字の色やフォントを変更することもできます。</p>
+<p></p>
+               </li>
+            
+               <li className="experience-item">
+              <h3>
+                <span className="year">2011/04 - 2017/03</span>新潟市立根岸小学校　在学
+              </h3>
+              
+           
+              <p></p>
             </li>
           </ul>
         </div>
