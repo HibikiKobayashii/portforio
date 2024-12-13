@@ -61,7 +61,7 @@ const Profile = () => {
           .experience-item {
             padding: 20px;
             margin-bottom: 20px;
-            background-color: #a0d8ef; /* 背景色を変更 */
+            background-color: #1a1a2e; /* 背景色を変更 */
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           }
