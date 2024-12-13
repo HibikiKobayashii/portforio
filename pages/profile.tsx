@@ -68,16 +68,16 @@ const Profile = () => {
           .experience-item h3 {
             font-size: 20px;
             margin: 0;
-            color: #08081a; /* テキストが読めるように色を変更 */
+            color: #a0d8ef; /* テキストが読めるように色を変更 */
           }
           .experience-item p {
             font-size: 16px;
             margin: 5px 0 0;
-            color: #08081a; /* テキストが読めるように色を変更 */
+            color: #a0d8ef; /* テキストが読めるように色を変更 */
           }
           .year {
             font-weight: bold;
-            color: #08081a; /* テキストが読めるように色を変更 */
+            color: #a0d8ef; /* テキストが読めるように色を変更 */
           }
         `}
       </style>
