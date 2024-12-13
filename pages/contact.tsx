@@ -5,8 +5,6 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<string | null>(null);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [error, setError] = useState<string | null>(null); // Error message
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -17,7 +15,6 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus(null);
-    setError(null);　
 
     try {
       const response = await fetch("/api/submitForm", {
@@ -33,11 +30,9 @@ const Contact = () => {
         setFormData({ name: "", email: "", message: "" });
       } else {
         const errorData = await response.json();
-        setError(errorData?.error || "送信に失敗しました");
         setStatus("error");
       }
     } catch (error) {
-      setError("ネットワークエラーが発生しました。再試行してください。");
       setStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -114,9 +109,9 @@ const Contact = () => {
               {isSubmitting ? "送信中..." : "送信"}
             </button>
             {status === "success" && <p style={{ color: "green" }}>送信が成功しました！</p>}
-            {status === "error" && error && (
+            {status === "error" && (
               <p style={{ color: "red" }}>
-                {error || "送信に失敗しました。もう一度お試しください。"}
+                送信に失敗しました。もう一度お試しください。
               </p>
             )}
           </form>
