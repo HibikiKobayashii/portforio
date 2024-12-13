@@ -17,7 +17,7 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus(null);
-    setError(null);
+    setError(null);　
 
     try {
       const response = await fetch("/api/submitForm", {
