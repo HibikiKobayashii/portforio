@@ -4,8 +4,8 @@ import Header from "../app/components/Header";
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [status, setStatus] = useState<string | null>(null); // Success or error status
-  const [error, setError] = useState<string | null>(null); // Error message for handling failed submission
+  const [status, setStatus] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null); // Error message
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
