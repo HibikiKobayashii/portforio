@@ -3,8 +3,7 @@ import Header from "../app/components/Header";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [status, setStatus] = useState<string | null>(null);
+  const [status, setStatus] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -13,11 +12,10 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setStatus(null);
+    setStatus("送信中...");
 
     try {
-      const response = await fetch("/api/submitForm", {
+      const response = await fetch("/api/saveToSheet", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -26,15 +24,14 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
+        setStatus("送信に成功しました！");
+        setFormData({ name: "", email: "", message: "" }); // フォームをリセット
       } else {
-        setStatus("error");
+        setStatus("送信に失敗しました。");
       }
-    } catch {
-      setStatus("error");
-    } finally {
-      setIsSubmitting(false);
+    } catch (error) {
+      console.error(error);
+      setStatus("エラーが発生しました。");
     }
   };
 
@@ -49,14 +46,9 @@ const Contact = () => {
         color: "#a0d8ef",
       }}
     >
+      <style>{/* 省略したスタイルコード */}</style>
       <Header />
-      <main
-        style={{
-          paddingTop: "70px",
-          textAlign: "center",
-          minHeight: "100vh",
-        }}
-      >
+      <main style={{ paddingTop: "70px", textAlign: "center", minHeight: "100vh" }}>
         <div className="profile-container">
           <h1 className="profile-header">Contact.</h1>
         </div>
@@ -104,16 +96,11 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            <button className="form-button" type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "送信中..." : "送信"}
+            <button className="form-button" type="submit">
+              送信
             </button>
-            {status === "success" && <p style={{ color: "green" }}>送信が成功しました！</p>}
-            {status === "error" && (
-              <p style={{ color: "red" }}>
-                送信に失敗しました。もう一度お試しください。
-              </p>
-            )}
           </form>
+          {status && <p style={{ color: "#a0d8ef" }}>{status}</p>}
         </div>
       </main>
     </div>
