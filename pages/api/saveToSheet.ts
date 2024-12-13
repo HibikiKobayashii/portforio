@@ -4,14 +4,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === "POST") {
     const { name, email, message } = req.body;
 
-    // 入力チェック
     if (!name || !email || !message) {
-      return res.status(400).json({ error: "すべてのフィールドを入力してください。" });
+      return res.status(400).json({ error: "必要なフィールドが不足しています。" });
     }
 
     try {
-      // SheetDB API にデータを送信
-      const response = await fetch("https://sheetdb.io/api/v1/pgotw150b2ot3", {
+      // SHEETDB_API_URL 環境変数を使用
+      const sheetDbUrl = process.env.SHEETDB_API_URL;
+
+      if (!sheetDbUrl) {
+        throw new Error("SHEETDB_API_URL が設定されていません。");
+      }
+
+      const response = await fetch(sheetDbUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -21,17 +26,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }),
       });
 
-      if (!response.ok) {
-        throw new Error("シートへの送信に失敗しました。");
+      if (response.ok) {
+        res.status(200).json({ message: "データが正常に送信されました。" });
+      } else {
+        const error = await response.json();
+        res.status(500).json({ error: `SheetDB API エラー: ${error}` });
       }
-
-      res.status(200).json({ message: "データが正常に送信されました。" });
     } catch (error) {
       console.error(error);
-      res.status(500).json({ error: "内部サーバーエラーが発生しました。" });
+      res.status(500).json({ error: "サーバーエラーが発生しました。" });
     }
   } else {
     res.setHeader("Allow", ["POST"]);
-    res.status(405).json({ error: `メソッド ${req.method} は許可されていません。` });
+    res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 }
