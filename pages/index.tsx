@@ -307,7 +307,7 @@ const App = () => {
     />
      {/* 1枚目の画像 */}
     <img
-      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/v.jpg"
+      src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/m.jpg"
       alt=""
       style={{
         width: "50%",
@@ -356,7 +356,7 @@ const App = () => {
             }}
           >
             <img
-              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/d.jpg"
+              src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/mirai.jpg"
               alt=""
               style={{
                 width: "90%",
