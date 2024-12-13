@@ -61,22 +61,23 @@ const Profile = () => {
           .experience-item {
             padding: 20px;
             margin-bottom: 20px;
-            background-color: #121212;
+            background-color: #a0d8ef; /* 背景色を変更 */
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           }
           .experience-item h3 {
             font-size: 20px;
             margin: 0;
-            color: #a0d8ef;
+            color: #08081a; /* テキストが読めるように色を変更 */
           }
           .experience-item p {
             font-size: 16px;
             margin: 5px 0 0;
+            color: #08081a; /* テキストが読めるように色を変更 */
           }
           .year {
             font-weight: bold;
-            color: #a0d8ef;
+            color: #08081a; /* テキストが読めるように色を変更 */
           }
         `}
       </style>
