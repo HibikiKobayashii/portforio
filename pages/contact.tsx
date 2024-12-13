@@ -1,21 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../app/components/Header";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("送信中...");
+    const formData = {
+      name: (event.target as HTMLFormElement).name.value,
+      email: (event.target as HTMLFormElement).email.value,
+      message: (event.target as HTMLFormElement).message.value,
+    };
 
     try {
-      const response = await fetch("../api/saveToSheet", {
+      const response = await fetch("/api/saveToSheet", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -24,14 +21,15 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setStatus("送信に成功しました！");
-        setFormData({ name: "", email: "", message: "" }); // フォームをリセット
+        alert("フォームが送信されました！");
+        (event.target as HTMLFormElement).reset(); // フォームのリセット
       } else {
-        setStatus("送信に失敗しました。");
+        const errorData = await response.json();
+        alert(`エラーが発生しました: ${errorData.error}`);
       }
     } catch (error) {
-      console.error(error);
-      setStatus("エラーが発生しました。");
+      console.error("送信エラー:", error);
+      alert("送信中にエラーが発生しました。");
     }
   };
 
@@ -122,11 +120,6 @@ const Contact = () => {
             background-color: #a0d8ef;
             color: #08081a;
           }
-          .status-message {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #7ebeab;
-          }
         `}
       </style>
 
@@ -151,9 +144,8 @@ const Contact = () => {
                 className="form-input"
                 type="text"
                 id="name"
+                name="name"
                 placeholder="お名前を入力してください"
-                value={formData.name}
-                onChange={handleChange}
                 required
               />
             </div>
@@ -165,9 +157,8 @@ const Contact = () => {
                 className="form-input"
                 type="email"
                 id="email"
+                name="email"
                 placeholder="メールアドレスを入力してください"
-                value={formData.email}
-                onChange={handleChange}
                 required
               />
             </div>
@@ -178,10 +169,9 @@ const Contact = () => {
               <textarea
                 className="form-textarea"
                 id="message"
+                name="message"
                 rows={5}
                 placeholder="内容をご入力ください"
-                value={formData.message}
-                onChange={handleChange}
                 required
               ></textarea>
             </div>
@@ -189,7 +179,6 @@ const Contact = () => {
               送信
             </button>
           </form>
-          {status && <p className="status-message">{status}</p>}
         </div>
       </main>
     </div>
