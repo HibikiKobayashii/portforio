@@ -29,7 +29,6 @@ const Contact = () => {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        const errorData = await response.json();
         setStatus("error");
       }
     } catch (error) {
