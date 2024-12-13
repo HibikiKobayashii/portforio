@@ -113,7 +113,7 @@ const Contact = () => {
               {isSubmitting ? "送信中..." : "送信"}
             </button>
             {status === "success" && <p style={{ color: "green" }}>送信が成功しました！</p>}
-            {status === "error" && (
+            {status === "error" && error && (
               <p style={{ color: "red" }}>
                 {error || "送信に失敗しました。もう一度お試しください。"}
               </p>
