@@ -61,23 +61,26 @@ const Profile = () => {
           .experience-item {
             padding: 20px;
             margin-bottom: 20px;
-            background-color: #1a1a2e; /* 背景色を変更 */
+            background-color: #1a1a2e;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           }
           .experience-item h3 {
             font-size: 20px;
             margin: 0;
-            color: #7ebeab; /* テキスト色を変更 */
+            color: #7ebeab; /* 文字色を変更 */
+            text-align: left; /* 左寄せ */
           }
           .experience-item p {
             font-size: 16px;
             margin: 5px 0 0;
-            color: #a0d8ef; /* テキストが読めるように色を変更 */
+            color: #a0d8ef;
           }
           .year {
             font-weight: bold;
-            color: #a0d8ef; /* テキストが読めるように色を変更 */
+            color: #7ebeab; /* 年代の色を変更 */
+            display: inline-block;
+            margin-right: 10px; /* 年代とテキストの間隔調整 */
           }
         `}
       </style>
@@ -96,17 +99,23 @@ const Profile = () => {
           {/* 経歴リスト */}
           <ul className="experience-list">
             <li className="experience-item">
-              <h3><span className="year">2035 - 現在</span>: エディター</h3>
+              <h3>
+                <span className="year">2035 - 現在</span>エディター
+              </h3>
               <p>テキストの例です。ここをクリックして「テキストを編集」を選択するか、ここをダブルクリックしてテキストを編集してください。文字の色やフォントを変更することもできます。</p>
             </li>
 
             <li className="experience-item">
-              <h3><span className="year">2035 - 2035</span>: 株式会社 Large, ライター</h3>
+              <h3>
+                <span className="year">2035 - 2035</span>株式会社 Large, ライター
+              </h3>
               <p>テキストの例です。ここをクリックして「テキストを編集」を選択するか、ここをダブルクリックしてテキストを編集してください。文字の色やフォントを変更することもできます。</p>
             </li>
 
             <li className="experience-item">
-              <h3><span className="year">2035 - 2035</span>: インターン</h3>
+              <h3>
+                <span className="year">2035 - 2035</span>インターン
+              </h3>
               <p>テキストの例です。ここをクリックして「テキストを編集」を選択するか、ここをダブルクリックしてテキストを編集してください。文字の色やフォントを変更することもできます。</p>
             </li>
           </ul>
