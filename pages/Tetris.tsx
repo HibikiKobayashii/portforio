@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import Header from "../app/components/Header";import React, { useState, useEffect, useRef } from "react";
 import Header from "../app/components/Header";
+
 
 // ブロックの形と色を定義
 const blockTypes = [
