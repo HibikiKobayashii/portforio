@@ -52,12 +52,11 @@ const Tetris: React.FC = () => {
           shapeIndex: 0,
         });
       } else {
-        // 初期化
+        // 初期化 (再帰呼び出しを削除)
         setNextBlock({
           type: Math.floor(Math.random() * blockTypes.length),
           shapeIndex: 0,
         });
-        generateBlock();
       }
     };
 
@@ -263,7 +262,7 @@ const Tetris: React.FC = () => {
       requestAnimationFrame(gameLoop);
     };
 
-    generateBlock();
+    generateBlock(); // 初期ブロック生成
     gameLoop();
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
