@@ -1,4 +1,4 @@
-const client = require('../lib/sheetdb'); // 修正済み
+import client from '../../lib/sheetdb'; // require() を使わない
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
