@@ -310,15 +310,17 @@ const Tetris: React.FC = () => {
   };
 
   useEffect(() => {
-    let interval: NodeJS.Timer;
+    let interval: NodeJS.Timer | undefined; // undefinedを追加
     if (!isPaused && !gameOver) {
       interval = setInterval(() => {
         setTimer((prevTimer) => prevTimer + 1);
       }, 1000);
-    } else {
+    } else if (interval) { // intervalがundefinedでないことを確認
       clearInterval(interval);
     }
-    return () => clearInterval(interval);
+    return () => {
+      if (interval) clearInterval(interval); // intervalがundefinedでないことを確認
+    };
   }, [isPaused, gameOver]);
 
   useEffect(() => {
