@@ -14,13 +14,14 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch("../pages/api/DB", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+     const response = await fetch("/api/DB", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(data),
+});
+      
 
       if (response.ok) {
         alert("フォームが送信されました！");
