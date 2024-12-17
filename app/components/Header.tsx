@@ -1,8 +1,10 @@
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'; // お問い合わせアイコンをインポート
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact'; 
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import Link from "next/link"; // Next.jsのリンクコンポーネントをインポート
+import Link from "next/link"; 
+import IconButton from '@mui/material/IconButton'; // IconButtonをインポート
+
 
 const Header = () => {
   return (
@@ -37,44 +39,44 @@ const Header = () => {
         >
           {/* プロフィールリンク */}
           <li>
-            <Link 
-              href="https://hibikikobayashii.github.io/profile" // プロフィールリンク
-              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
+            <IconButton 
+              href="https://hibikikobayashii.github.io/profile" 
+              aria-label="profile"
             >
-              <AccountCircleIcon style={{ marginRight: "8px" }} />
-            </Link>
+              <AccountCircleIcon  /> 
+            </IconButton>
           </li>
           
           {/* お問い合わせリンク */}
           <li>
-            <Link 
-              href="https://hibikikobayashii.github.io/contact" // お問い合わせリンク
-              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
+            <IconButton 
+              href="https://hibikikobayashii.github.io/contact" 
+              aria-label="contact"
             >
-              <ConnectWithoutContactIcon style={{ marginRight: "8px" }} />
-            </Link>
+              <ConnectWithoutContactIcon /> 
+            </IconButton>
           </li>
           
           {/* インスタグラムリンク */}
           <li>
-            <Link 
+            <IconButton 
               href="https://www.instagram.com/mrq_1p?igsh=enljbnM2d25wdnZ6" 
-              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
+              aria-label="instagram"
             >
-              <InstagramIcon style={{ marginRight: "8px" }} />
-            </Link>
+              <InstagramIcon /> 
+            </IconButton>
           </li>
 
           {/* YouTubeリンク */}
           <li>
-            <Link 
+            <IconButton 
               href="https://youtube.com/@futuregame0920?si=X0NHIuS1oiX6TMSl" 
-              style={{ color: "#a0d8ef", textDecoration: "none", display: "flex", alignItems: "center" }}
+              aria-label="youtube"
             >
-              <YouTubeIcon style={{ marginRight: "8px" }} />
-            </Link>
+              <YouTubeIcon /> 
+            </IconButton>
           </li>
-       
+        
         </ul>
       </nav>
     </header>
