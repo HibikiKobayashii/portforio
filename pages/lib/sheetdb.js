@@ -1,7 +1,7 @@
-const { sheetDB } = require('sheetdb-node');
+import sheetDB from 'sheetdb-node';
 
 const client = sheetDB({
   address: process.env.SHEETDB_ADDRESS,
 });
 
-module.exports = client;
+export default client;
