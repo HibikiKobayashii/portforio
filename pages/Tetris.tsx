@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Header from "../app/components/Header";
 
-
 // ブロックの形と色を定義
 const blockTypes = [
   { shapes: [[[1, 1, 1, 1]]], color: "cyan" }, // I
@@ -311,11 +310,11 @@ const Tetris: React.FC = () => {
   };
 
   useEffect(() => {
-    let interval: NodeJS.Timer | undefined; // undefinedを追加
+    let interval: NodeJS.Timeout | undefined; // NodeJS.Timeout型に変更
     if (!isPaused && !gameOver) {
       interval = setInterval(() => {
         setTimer((prevTimer) => prevTimer + 1);
-      }, 1000);
+      }, 1000) as NodeJS.Timeout; // NodeJS.Timeout型にキャスト
     } else if (interval) { // intervalがundefinedでないことを確認
       clearInterval(interval);
     }
