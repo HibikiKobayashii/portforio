@@ -14,7 +14,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch("/api/DB", {
+      const response = await fetch("../pages/api/DB", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
