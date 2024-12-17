@@ -1,4 +1,4 @@
-const client = require('../pages/lib/sheetdb.js'); // 修正済み
+const client = require('../pages/lib/sheetdb'); // 修正済み
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
