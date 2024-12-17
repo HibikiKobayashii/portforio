@@ -14,7 +14,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch("/api/saveToSheet", {
+      const response = await fetch("../api/DB.js", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
