@@ -111,21 +111,7 @@ const Header = () => {
             </Link>
           </li>
 
-          {/* Tetris */}
-          <li>
-            <Link href="https://hibikikobayashii.github.io/Tetris">
-              <IconButton
-                onClick={() => handleClick("youtube")}
-                style={{
-                  color: clicked === "youtube" ? "#7ebeab" : "#a0d8ef",
-                  transform: clicked === "youtube" ? "scale(1.2)" : "scale(1)",
-                  transition: "transform 0.3s ease, color 0.3s ease",
-                }}
-              >
-                <YouTubeIcon />
-              </IconButton>
-            </Link>
-          </li>
+        
 
           
         </ul>
