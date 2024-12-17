@@ -9,7 +9,7 @@ const Contact = () => {
 
     const data = {
       name: formData.get("name") as string,
-      email: formData.get("email") as string,
+      email: formData.get("email") as string,　
       message: formData.get("message") as string,
     };
 
