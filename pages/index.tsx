@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const App = () => {
   const typingEffectRef = useRef(null);
+  const interactiveBtnRef = useRef(null);
 
   useEffect(() => {
     const text = "This is a typing effect.";
@@ -13,14 +14,16 @@ const App = () => {
     let i = 0;
 
     function typeWriter() {
-      if (i < text.length) {
+      if (element && i < text.length) {
         element.innerHTML += text.charAt(i);
         i++;
         setTimeout(typeWriter, 50);
       }
     }
 
-    typeWriter();
+    if (element) {
+      typeWriter();
+    }
   }, []);
 
   useEffect(() => {
@@ -39,6 +42,12 @@ const App = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleInteractiveBtnClick = () => {
+    if (interactiveBtnRef.current) {
+      interactiveBtnRef.current.classList.toggle("active");
+    }
+  };
 
   return (
     <div
@@ -103,7 +112,14 @@ const App = () => {
             /* インタラクティブなボタン */
             .interactive-btn {
               background-color: #008CBA; /* Blue */
-              /* ... */
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              transition: background-color 0.3s ease;
             }
 
             .interactive-btn.active {
@@ -132,21 +148,19 @@ const App = () => {
       >
         <TextContent />
 
-        {/* hibiki.jpg画像を表示 */}
         <div style={{ marginTop: "20px" }}>
-          <img
+          <Image
             src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/hibiki.jpg"
             alt="小林響"
+            width={300}
+            height={300}
             style={{
-              width: "300px",
-              height: "auto",
               borderRadius: "10px",
               border: "1px solid #a0d8ef",
             }}
           />
         </div>
 
-        {/* スキルセクション */}
         <section
           id="skills"
           style={{
@@ -160,7 +174,6 @@ const App = () => {
             alignItems: "flex-start",
           }}
         >
-          {/* 左側: スキル表 */}
           <div className="table-container" style={{ width: "65%" }}>
             <h1
               style={{
@@ -308,7 +321,6 @@ const App = () => {
             <SkillDescription />
           </div>
 
-          {/* 右側: ReactとNext.js画像 */}
           <div
             className="image-container"
             style={{
@@ -342,7 +354,6 @@ const App = () => {
           </div>
         </section>
 
-        {/* 新しいセクション */}
         <section
           id="new-section"
           style={{
@@ -355,7 +366,6 @@ const App = () => {
             borderRadius: "10px",
           }}
         >
-          {/* 左側: 画像 */}
           <div
             className="left fade-in"
             style={{
@@ -366,29 +376,26 @@ const App = () => {
               gap: "20px",
             }}
           >
-            {/* 1枚目の画像 */}
-            <img
+            <Image
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/s.jpg"
               alt=""
+              width={400} // 適切な幅を指定
+              height={300} // 適切な高さを指定
               style={{
-                width: "50%",
-                height: "auto",
                 borderRadius: "10px",
               }}
             />
-            {/* 2枚目の画像 */}
-            <img
+            <Image
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/m.jpg"
               alt=""
+              width={400} // 適切な幅を指定
+              height={300} // 適切な高さを指定
               style={{
-                width: "50%",
-                height: "auto",
                 borderRadius: "10px",
               }}
             />
           </div>
 
-          {/* 右側: テキスト */}
           <div
             className="right fade-in"
             style={{
@@ -419,7 +426,6 @@ const App = () => {
             borderRadius: "10px",
           }}
         >
-          {/* 左側: 画像 */}
           <div
             className="left fade-in"
             style={{
@@ -428,18 +434,17 @@ const App = () => {
               justifyContent: "center",
             }}
           >
-            <img
+            <Image
               src="https://raw.githubusercontent.com/HibikiKobayashii/HibikiKobayashii.github.io/main/gazo/mirai.jpg"
               alt=""
+              width={500} // 適切な幅を指定
+              height={300} // 適切な高さを指定
               style={{
-                width: "70%",
-                height: "auto",
                 borderRadius: "10px",
               }}
             />
           </div>
 
-          {/* 右側: テキスト */}
           <div
             className="right fade-in"
             style={{
@@ -456,21 +461,17 @@ const App = () => {
           </div>
         </section>
 
-        {/* タイピングエフェクト */}
         <p ref={typingEffectRef} style={{ marginTop: "50px" }}></p>
 
-        {/* ホバーエフェクトのボタン */}
         <button className="btn" style={{ marginTop: "20px" }}>
           Hover me
         </button>
 
-        {/* インタラクティブなボタン */}
         <button
           className="interactive-btn"
           style={{ marginTop: "20px" }}
-          onClick={() => {
-            this.classList.toggle("active");
-          }}
+          onClick={handleInteractiveBtnClick}
+          ref={interactiveBtnRef}
         >
           Click me
         </button>
