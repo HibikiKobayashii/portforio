@@ -3,14 +3,13 @@ export default async function handler(req, res) {
     try {
       const { name, email, message } = req.body;
 
-      // SheetDB に挿入するデータ
       const data = {
-        B: name,  // B列に名前
-        D: email, // D列にメールアドレス
-        E: message // E列に内容
+        B: name, 
+        D: email, 
+        E: message
       };
 
-      await client.create(data); // SheetDBへデータ送信
+      await client.create(data); 
       res.status(200).json({ message: 'Data saved successfully!' });
     } catch (error) {
       console.error('Error saving data:', error);
