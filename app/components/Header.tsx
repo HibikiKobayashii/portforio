@@ -1,9 +1,9 @@
-import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact"; // お問い合わせアイコン
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact"; 
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Link from "next/link";
-import IconButton from "@mui/material/IconButton"; // MUIのIconButton
+import IconButton from "@mui/material/IconButton"; 
 import { useState } from "react";
 
 const Header = () => {
